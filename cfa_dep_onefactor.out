@@ -1,6 +1,6 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/11/2013   4:11 PM
+10/30/2013   8:30 PM
 
 INPUT INSTRUCTIONS
 
@@ -22,7 +22,7 @@ INPUT INSTRUCTIONS
   	
   Output:
   	
-  	STANDARDIZED;
+  	STANDARDIZED (STDYX);
 
 
 
@@ -190,78 +190,6 @@ STDYX Standardization
     FAILURE            0.569      0.031     18.376      0.000
 
 
-STDY Standardization
-
-                                                    Two-Tailed
-                    Estimate       S.E.  Est./S.E.    P-Value
-
- DEPRESSI BY
-    SAD                0.833      0.015     57.198      0.000
-    BLUES              0.744      0.019     38.574      0.000
-    DEPRESS            0.833      0.015     57.088      0.000
-    LONELY             0.774      0.018     44.096      0.000
-    CRYING             0.633      0.025     25.532      0.000
-    TIRED              0.584      0.027     21.712      0.000
-    FAILURE            0.656      0.024     27.811      0.000
-
- Intercepts
-    SAD                1.931      0.063     30.425      0.000
-    BLUES              1.853      0.062     29.975      0.000
-    DEPRESS            1.821      0.061     29.785      0.000
-    LONELY             1.810      0.061     29.718      0.000
-    CRYING             1.849      0.062     29.952      0.000
-    TIRED              1.923      0.063     30.381      0.000
-    FAILURE            2.154      0.068     31.524      0.000
-
- Variances
-    DEPRESSION         1.000      0.000    999.000    999.000
-
- Residual Variances
-    SAD                0.306      0.024     12.629      0.000
-    BLUES              0.447      0.029     15.588      0.000
-    DEPRESS            0.306      0.024     12.597      0.000
-    LONELY             0.400      0.027     14.721      0.000
-    CRYING             0.599      0.031     19.094      0.000
-    TIRED              0.659      0.031     21.015      0.000
-    FAILURE            0.569      0.031     18.376      0.000
-
-
-STD Standardization
-
-                                                    Two-Tailed
-                    Estimate       S.E.  Est./S.E.    P-Value
-
- DEPRESSI BY
-    SAD                0.742      0.028     26.355      0.000
-    BLUES              0.588      0.026     22.339      0.000
-    DEPRESS            0.711      0.027     26.346      0.000
-    LONELY             0.704      0.030     23.698      0.000
-    CRYING             0.455      0.025     18.018      0.000
-    TIRED              0.491      0.030     16.326      0.000
-    FAILURE            0.372      0.020     18.909      0.000
-
- Intercepts
-    SAD                1.722      0.033     51.501      0.000
-    BLUES              1.466      0.030     49.401      0.000
-    DEPRESS            1.554      0.032     48.566      0.000
-    LONELY             1.647      0.034     48.275      0.000
-    CRYING             1.328      0.027     49.300      0.000
-    TIRED              1.619      0.032     51.285      0.000
-    FAILURE            1.221      0.021     57.443      0.000
-
- Variances
-    DEPRESSION         1.000      0.000    999.000    999.000
-
- Residual Variances
-    SAD                0.243      0.018     13.894      0.000
-    BLUES              0.280      0.017     16.186      0.000
-    DEPRESS            0.223      0.016     13.852      0.000
-    LONELY             0.331      0.021     15.706      0.000
-    CRYING             0.309      0.018     17.404      0.000
-    TIRED              0.467      0.026     17.786      0.000
-    FAILURE            0.183      0.011     17.275      0.000
-
-
 R-SQUARE
 
     Observed                                        Two-Tailed
@@ -282,8 +210,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  16:11:19
-        Ending Time:  16:11:19
+     Beginning Time:  20:30:58
+        Ending Time:  20:30:58
        Elapsed Time:  00:00:00
 
 

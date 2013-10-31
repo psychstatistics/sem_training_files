@@ -1,0 +1,23 @@
+Title:
+	
+	ANOVA example
+
+Data:
+
+	File is anova_example_data.csv;
+
+Variable:
+	
+	Names are dep1 dep2 dep3;
+		
+Model:
+
+	dep1 (b);
+	dep2 (b);
+	dep3 (b);
+	[dep1];
+	[dep2];
+	[dep3];
+	
+	
+

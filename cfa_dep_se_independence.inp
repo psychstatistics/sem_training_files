@@ -1,0 +1,29 @@
+Title:
+	
+	CFA;
+	Self-esteem and depression;
+	Independence Model;
+	
+
+Data:
+
+	File is se_dep_items.csv;
+
+Variable:
+	
+	Names are sad blues depress lonely crying tired failure
+			  worthy capable goodqual attitude;
+			  
+Model:
+	
+	sad;
+	blues;
+	depress;
+	lonely;
+	crying;
+	tired;
+	failure;
+	worthy;
+	capable;
+	goodqual;
+	attitude;

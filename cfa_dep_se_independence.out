@@ -1,0 +1,183 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+10/30/2013   2:01 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	CFA;
+  	Self-esteem and depression;
+  	Independence Model;
+  	
+
+  Data:
+
+  	File is se_dep_items.csv;
+
+  Variable:
+  	
+  	Names are sad blues depress lonely crying tired failure
+  			  worthy capable goodqual attitude;
+  			
+  Model:
+  	
+  	sad;
+  	blues;
+  	depress;
+  	lonely;
+  	crying;
+  	tired;
+  	failure;
+  	worthy;
+  	capable;
+  	goodqual;
+  	attitude;
+
+
+
+*** WARNING in MODEL command
+  All variables are uncorrelated with all other variables in the model.
+  Check that this is what is intended.
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+
+CFA;
+Self-esteem and depression;
+Independence Model;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         711
+
+Number of dependent variables                                   11
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   SAD         BLUES       DEPRESS     LONELY      CRYING      TIRED
+   FAILURE     WORTHY      CAPABLE     GOODQUAL    ATTITUDE
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  se_dep_items.csv
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       22
+
+Loglikelihood
+
+          H0 Value                       -9440.529
+          H1 Value                       -7914.784
+
+Information Criteria
+
+          Akaike (AIC)                   18925.058
+          Bayesian (BIC)                 19025.525
+          Sample-Size Adjusted BIC       18955.670
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                           3051.490
+          Degrees of Freedom                    55
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.277
+          90 Percent C.I.                    0.269  0.285
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.000
+          TLI                                0.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           3051.490
+          Degrees of Freedom                    55
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.319
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Means
+    SAD                1.722      0.033     51.500      0.000
+    BLUES              1.466      0.030     49.401      0.000
+    DEPRESS            1.554      0.032     48.567      0.000
+    LONELY             1.647      0.034     48.275      0.000
+    CRYING             1.328      0.027     49.300      0.000
+    TIRED              1.619      0.032     51.285      0.000
+    FAILURE            1.221      0.021     57.443      0.000
+    WORTHY             3.150      0.032     97.035      0.000
+    CAPABLE            2.387      0.033     71.416      0.000
+    GOODQUAL           2.980      0.029    101.746      0.000
+    ATTITUDE           2.820      0.032     87.343      0.000
+
+ Variances
+    SAD                0.794      0.042     18.855      0.000
+    BLUES              0.626      0.033     18.855      0.000
+    DEPRESS            0.728      0.039     18.855      0.000
+    LONELY             0.828      0.044     18.854      0.000
+    CRYING             0.516      0.027     18.855      0.000
+    TIRED              0.708      0.038     18.855      0.000
+    FAILURE            0.321      0.017     18.855      0.000
+    WORTHY             0.750      0.040     18.855      0.000
+    CAPABLE            0.794      0.042     18.854      0.000
+    GOODQUAL           0.610      0.032     18.854      0.000
+    ATTITUDE           0.741      0.039     18.855      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.151E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  14:01:15
+        Ending Time:  14:01:15
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

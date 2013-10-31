@@ -1,0 +1,215 @@
+Mplus VERSION 7.1 (Mac)
+MUTHEN & MUTHEN
+06/07/2013   1:53 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	Correlation between anxiety, depression, and QoL
+  	with missing data
+
+  Data:
+
+  	File is anx_dep_qol_missing.csv;
+
+  Variable:
+  	
+  	Names are
+  		anx dep qol;
+  	Missing are all (-999);
+  		
+  Model:
+
+  	anx WITH dep qol;
+  	dep WITH qol;
+
+  	
+  Output:
+  	STDYX;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Correlation between anxiety, depression, and QoL
+with missing data
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of dependent variables                                    3
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   ANX         DEP         QOL
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  anx_dep_qol_missing.csv
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             7
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              ANX           DEP           QOL
+              ________      ________      ________
+ ANX            0.780
+ DEP            0.530         0.700
+ QOL            0.690         0.620         0.890
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        9
+
+Loglikelihood
+
+          H0 Value                        -295.877
+          H1 Value                        -295.877
+
+Information Criteria
+
+          Akaike (AIC)                     609.754
+          Bayesian (BIC)                   633.201
+          Sample-Size Adjusted BIC         604.777
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                             36.897
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ANX      WITH
+    DEP                0.481      0.115      4.199      0.000
+    QOL                0.266      0.097      2.738      0.006
+
+ DEP      WITH
+    QOL                0.360      0.105      3.440      0.001
+
+ Means
+    ANX                0.176      0.101      1.731      0.084
+    DEP                0.145      0.109      1.331      0.183
+    QOL               -0.031      0.091     -0.346      0.730
+
+ Variances
+    ANX                0.847      0.133      6.351      0.000
+    DEP                0.913      0.152      6.020      0.000
+    QOL                0.746      0.111      6.710      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ANX      WITH
+    DEP                0.547      0.087      6.311      0.000
+    QOL                0.335      0.106      3.160      0.002
+
+ DEP      WITH
+    QOL                0.437      0.098      4.445      0.000
+
+ Means
+    ANX                0.191      0.111      1.711      0.087
+    DEP                0.151      0.115      1.317      0.188
+    QOL               -0.036      0.105     -0.345      0.730
+
+ Variances
+    ANX                1.000      0.000    999.000    999.000
+    DEP                1.000      0.000    999.000    999.000
+    QOL                1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.773E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  13:53:07
+        Ending Time:  13:53:07
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

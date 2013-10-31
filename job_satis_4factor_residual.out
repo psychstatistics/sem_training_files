@@ -1,0 +1,230 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+10/30/2013  11:22 AM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	Structural Regression
+  	4 correlated factors - residual correlation.
+
+  Data:
+
+  	File is job_satis_data.txt;
+  	Type is correlation stdeviations;
+  	Nobservations = 263;
+
+  Variable:
+  	
+  	Names are work1 work2 work3 happy mood1 mood2
+    			  perform1 perform2 approval beliefs
+  			  selftalk imagery;
+
+  Model:
+
+  	CT BY beliefs selftalk imagery;
+  	SWB BY happy mood1 mood2;
+  	DT BY perform1 perform2 approval;
+  	JS BY work1 work2 work3;
+  	
+  	happy WITH mood2;
+  	
+  Output:
+
+  	MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Structural Regression
+4 correlated factors - residual correlation.
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         263
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            4
+
+Observed dependent variables
+
+  Continuous
+   WORK1       WORK2       WORK3       HAPPY       MOOD1       MOOD2
+   PERFORM1    PERFORM2    APPROVAL    BELIEFS     SELFTALK    IMAGERY
+
+Continuous latent variables
+   CT          SWB         DT          JS
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  job_satis_data.txt
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       31
+
+Loglikelihood
+
+          H0 Value                       -3121.267
+          H1 Value                       -3092.936
+
+Information Criteria
+
+          Akaike (AIC)                    6304.534
+          Bayesian (BIC)                  6415.270
+          Sample-Size Adjusted BIC        6316.985
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             56.662
+          Degrees of Freedom                    47
+          P-Value                           0.1579
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.028
+          90 Percent C.I.                    0.000  0.052
+          Probability RMSEA <= .05           0.936
+
+CFI/TLI
+
+          CFI                                0.991
+          TLI                                0.987
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1087.490
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.037
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CT       BY
+    BELIEFS            1.000      0.000    999.000    999.000
+    SELFTALK           1.056      0.178      5.922      0.000
+    IMAGERY            1.890      0.331      5.717      0.000
+
+ SWB      BY
+    HAPPY              1.000      0.000    999.000    999.000
+    MOOD1              1.490      0.219      6.799      0.000
+    MOOD2              0.821      0.126      6.535      0.000
+
+ DT       BY
+    PERFORM1           1.000      0.000    999.000    999.000
+    PERFORM2           1.133      0.080     14.105      0.000
+    APPROVAL           0.993      0.089     11.175      0.000
+
+ JS       BY
+    WORK1              1.000      0.000    999.000    999.000
+    WORK2              1.035      0.081     12.770      0.000
+    WORK3              0.891      0.073     12.145      0.000
+
+ SWB      WITH
+    CT                 0.024      0.014      1.685      0.092
+
+ DT       WITH
+    CT                -0.028      0.017     -1.637      0.102
+    SWB               -0.088      0.017     -5.139      0.000
+
+ JS       WITH
+    CT                 0.060      0.029      2.090      0.037
+    SWB                0.138      0.028      5.011      0.000
+    DT                -0.131      0.030     -4.448      0.000
+
+ HAPPY    WITH
+    MOOD2             -0.043      0.018     -2.390      0.017
+
+ Variances
+    CT                 0.212      0.049      4.285      0.000
+    SWB                0.142      0.031      4.643      0.000
+    DT                 0.235      0.031      7.598      0.000
+    JS                 0.618      0.081      7.616      0.000
+
+ Residual Variances
+    WORK1              0.260      0.042      6.231      0.000
+    WORK2              0.368      0.050      7.394      0.000
+    WORK3              0.384      0.044      8.692      0.000
+    HAPPY              0.173      0.025      6.877      0.000
+    MOOD1              0.261      0.044      5.970      0.000
+    MOOD2              0.178      0.022      8.133      0.000
+    PERFORM1           0.106      0.016      6.783      0.000
+    PERFORM2           0.068      0.017      3.975      0.000
+    APPROVAL           0.300      0.029     10.186      0.000
+    BELIEFS            0.292      0.043      6.862      0.000
+    SELFTALK           1.022      0.097     10.496      0.000
+    IMAGERY            0.242      0.123      1.965      0.049
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.644E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+BELIEFS  WITH HAPPY                4.521    -0.037     -0.037       -0.163
+BELIEFS  WITH PERFORM2             5.228    -0.031     -0.031       -0.219
+BELIEFS  WITH APPROVAL             5.928     0.050      0.050        0.170
+IMAGERY  WITH WORK2                4.516     0.075      0.075        0.251
+IMAGERY  WITH PERFORM2             6.250     0.047      0.047        0.367
+
+
+     Beginning Time:  11:22:13
+        Ending Time:  11:22:13
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

@@ -1,0 +1,23 @@
+Title:
+	
+	Correlation between anxiety, depression, and QoL
+	with missing data
+
+Data:
+
+	File is anx_dep_qol_missing.csv;
+
+Variable:
+	
+	Names are
+		anx dep qol;
+	Missing are all (-999);
+		
+Model:
+
+	anx WITH dep qol;
+	dep WITH qol;
+
+	
+Output:
+	STDYX;

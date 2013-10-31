@@ -1,0 +1,19 @@
+Title:
+	
+	CFA Two Factors;
+	Self-esteem and depression;
+
+Data:
+
+	File is se_dep_items.csv;
+
+Variable:
+	
+	Names are sad blues depress lonely crying tired failure
+			  worthy capable goodqual attitude;
+			  
+Model:
+
+	DEPRESSION BY sad-failure;
+	SE BY worthy-attitude;
+	

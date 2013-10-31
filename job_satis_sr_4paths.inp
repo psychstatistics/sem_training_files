@@ -1,0 +1,35 @@
+TITLE: 
+	
+	Structural Regression
+	6 paths among the latent variables
+	over identified
+
+DATA:
+
+	File is job_satis_data.txt;
+	Type is correlation stdeviations;
+	Nobservations = 263;
+
+VARIABLE:
+	
+	Names are work1 work2 work3 happy mood1 mood2
+  			  perform1 perform2 approval beliefs 
+			  selftalk imagery;
+
+MODEL:
+	
+	! Measurement Part;
+	
+	CT BY beliefs selftalk imagery;
+	SWB BY happy mood1 mood2;
+	DT BY perform1 perform2 approval;
+	JS BY work1 work2 work3;
+	
+	happy WITH mood2;
+	
+	! Structural Part;
+	
+	JS ON SWB DT;
+	SWB ON DT;
+	DT ON CT;
+	

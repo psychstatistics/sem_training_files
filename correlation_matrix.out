@@ -1,0 +1,187 @@
+Mplus VERSION 7 (Mac)
+MUTHEN & MUTHEN
+06/05/2013   3:51 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+
+  Data:
+
+  	File is auto_mplus.csv;
+
+  Variable:
+  	
+  	Names are
+  		make mpg weight length foreign;
+  		
+  	Usevariables are
+  		mpg weight length;
+  		
+  Model:
+
+  	mpg WITH weight length;
+  	weight WITH length;
+
+  	
+  Output:
+  	STDYX;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                          74
+
+Number of dependent variables                                    3
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MPG         WEIGHT      LENGTH
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  auto_mplus.csv
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        9
+
+Loglikelihood
+
+          H0 Value                       -1042.105
+          H1 Value                       -1042.105
+
+Information Criteria
+
+          Akaike (AIC)                    2102.210
+          Bayesian (BIC)                  2122.946
+          Sample-Size Adjusted BIC        2094.584
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            246.868
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MPG      WITH
+    WEIGHT         -3580.380    662.657     -5.403      0.000
+    LENGTH          -101.129     18.880     -5.356      0.000
+
+ WEIGHT   WITH
+    LENGTH         16149.692   2731.808      5.912      0.000
+
+ Means
+    MPG               21.297      0.668     31.883      0.000
+    WEIGHT          3019.459     89.734     33.649      0.000
+    LENGTH           187.932      2.571     73.101      0.000
+
+ Variances
+    MPG               33.020      5.428      6.083      0.000
+    WEIGHT         *********  97959.961      6.083      0.000
+    LENGTH           489.090     80.406      6.083      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MPG      WITH
+    WEIGHT            -0.807      0.041    -19.926      0.000
+    LENGTH            -0.796      0.043    -18.666      0.000
+
+ WEIGHT   WITH
+    LENGTH             0.946      0.012     77.454      0.000
+
+ Means
+    MPG                3.706      0.326     11.366      0.000
+    WEIGHT             3.912      0.342     11.441      0.000
+    LENGTH             8.498      0.708     12.000      0.000
+
+ Variances
+    MPG                1.000      0.000    999.000    999.000
+    WEIGHT             1.000      0.000    999.000    999.000
+    LENGTH             1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.103E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  15:51:35
+        Ending Time:  15:51:35
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

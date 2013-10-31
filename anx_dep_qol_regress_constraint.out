@@ -1,0 +1,208 @@
+Mplus VERSION 7.1 (Mac)
+MUTHEN & MUTHEN
+06/12/2013   2:26 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	Depression predicted by anxiety and QoL
+  	Slopes constrained to be equal
+
+  Data:
+
+  	File is anx_dep_qol.csv;
+
+  Variable:
+  	
+  	Names are
+  		anx dep qol;
+  		
+  Model:
+
+  	dep ON anx (a)
+  		   qol (a);
+  	anx WITH qol;
+
+  	
+  Output:
+  	STDYX;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Depression predicted by anxiety and QoL
+Slopes constrained to be equal
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of dependent variables                                    1
+Number of independent variables                                  2
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   DEP
+
+Observed independent variables
+   ANX         QOL
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  anx_dep_qol.csv
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        8
+
+Loglikelihood
+
+          H0 Value                        -372.665
+          H1 Value                        -371.376
+
+Information Criteria
+
+          Akaike (AIC)                     761.330
+          Bayesian (BIC)                   782.171
+          Sample-Size Adjusted BIC         756.905
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              2.578
+          Degrees of Freedom                     1
+          P-Value                           0.1083
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.126
+          90 Percent C.I.                    0.000  0.325
+          Probability RMSEA <= .05           0.152
+
+CFI/TLI
+
+          CFI                                0.967
+          TLI                                0.934
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                             49.784
+          Degrees of Freedom                     2
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.034
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ DEP      ON
+    ANX                0.366      0.047      7.767      0.000
+    QOL                0.366      0.047      7.767      0.000
+
+ ANX      WITH
+    QOL                0.296      0.092      3.224      0.001
+
+ Means
+    ANX                0.173      0.095      1.823      0.068
+    QOL               -0.037      0.092     -0.399      0.690
+
+ Intercepts
+    DEP                0.101      0.072      1.394      0.163
+
+ Variances
+    ANX                0.896      0.127      7.071      0.000
+    QOL                0.843      0.119      7.071      0.000
+
+ Residual Variances
+    DEP                0.519      0.073      7.071      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ DEP      ON
+    ANX                0.380      0.041      9.308      0.000
+    QOL                0.369      0.040      9.278      0.000
+
+ ANX      WITH
+    QOL                0.341      0.088      3.853      0.000
+
+ Means
+    ANX                0.182      0.101      1.808      0.071
+    QOL               -0.040      0.100     -0.399      0.690
+
+ Intercepts
+    DEP                0.111      0.080      1.379      0.168
+
+ Variances
+    ANX                1.000      0.000    999.000    999.000
+    QOL                1.000      0.000    999.000    999.000
+
+ Residual Variances
+    DEP                0.624      0.077      8.151      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    DEP                0.376      0.077      4.917      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.104E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  14:26:17
+        Ending Time:  14:26:17
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

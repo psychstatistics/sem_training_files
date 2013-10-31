@@ -1,0 +1,19 @@
+Title:
+	
+	CFA One Factor - Depression itmes
+
+Data:
+
+	File is dep_items.csv;
+
+Variable:
+	
+	Names are sad blues depress lonely crying tired failure;
+
+Model:
+
+	DEPRESSION BY sad-failure;
+	
+Output:
+	
+	STANDARDIZED;

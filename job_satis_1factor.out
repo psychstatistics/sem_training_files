@@ -1,0 +1,180 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+10/24/2013  10:16 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	Structural Regression
+  	1 common factor
+
+  Data:
+
+  	File is job_satis_data.txt;
+  	Type is correlation stdeviations;
+  	Nobservations = 263;
+
+  Variable:
+  	
+  	Names are work1 work2 work3 happy mood1 mood2
+    			  perform1 perform2 approval beliefs
+  			  selftalk imagery;
+
+  Model:
+
+  	CT BY work1-imagery;
+  	
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Structural Regression
+1 common factor
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         263
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   WORK1       WORK2       WORK3       HAPPY       MOOD1       MOOD2
+   PERFORM1    PERFORM2    APPROVAL    BELIEFS     SELFTALK    IMAGERY
+
+Continuous latent variables
+   CT
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  job_satis_data.txt
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       24
+
+Loglikelihood
+
+          H0 Value                       -3376.334
+          H1 Value                       -3092.936
+
+Information Criteria
+
+          Akaike (AIC)                    6800.668
+          Bayesian (BIC)                  6886.400
+          Sample-Size Adjusted BIC        6810.309
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            566.797
+          Degrees of Freedom                    54
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.190
+          90 Percent C.I.                    0.176  0.204
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.498
+          TLI                                0.386
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1087.490
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.143
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CT       BY
+    WORK1              1.000      0.000    999.000    999.000
+    WORK2              1.026      0.202      5.072      0.000
+    WORK3              0.876      0.182      4.826      0.000
+    HAPPY              0.611      0.115      5.313      0.000
+    MOOD1              0.825      0.155      5.312      0.000
+    MOOD2              0.417      0.097      4.305      0.000
+    PERFORM1          -1.087      0.159     -6.826      0.000
+    PERFORM2          -1.215      0.175     -6.951      0.000
+    APPROVAL          -1.165      0.180     -6.457      0.000
+    BELIEFS            0.230      0.116      1.972      0.049
+    SELFTALK           0.126      0.180      0.701      0.483
+    IMAGERY            0.379      0.166      2.291      0.022
+
+ Variances
+    CT                 0.174      0.049      3.534      0.000
+
+ Residual Variances
+    WORK1              0.704      0.064     10.987      0.000
+    WORK2              0.847      0.077     11.048      0.000
+    WORK3              0.741      0.067     11.118      0.000
+    HAPPY              0.250      0.023     10.962      0.000
+    MOOD1              0.457      0.042     10.962      0.000
+    MOOD2              0.243      0.022     11.227      0.000
+    PERFORM1           0.135      0.016      8.319      0.000
+    PERFORM2           0.112      0.016      6.844      0.000
+    APPROVAL           0.296      0.030      9.876      0.000
+    BELIEFS            0.494      0.043     11.432      0.000
+    SELFTALK           1.256      0.110     11.463      0.000
+    IMAGERY            0.973      0.085     11.418      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.130E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  22:16:07
+        Ending Time:  22:16:07
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

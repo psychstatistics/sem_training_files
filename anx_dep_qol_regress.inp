@@ -1,0 +1,22 @@
+Title:
+	
+	Depression predicted by anxiety and QoL
+		
+
+Data:
+
+	File is anx_dep_qol.csv;
+
+Variable:
+	
+	Names are
+		anx dep qol;
+		
+Model:
+
+	dep ON anx qol;
+	anx WITH qol;
+
+	
+Output:
+	STDYX;

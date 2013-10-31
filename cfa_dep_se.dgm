@@ -1,0 +1,62 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+
+
+ CFA Two Factors;
+ Self-esteem and depression;
+
+DATA:
+ File is se_dep_items.csv;
+VARIABLE:
+ Names are sad blues depress lonely crying tired failure
+     worthy capable goodqual attitude;
+MODEL:
+ DEPRESSION BY sad-failure;
+ SE BY worthy-attitude;
+INPUT_END
+2
+0
+0
+0
+ML
+1
+GENERAL
+0
+11
+2
+0
+sad blues depress lonely crying tired failure worthy capable goodqual attitude depression se
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0
+0
+2
+depression
+sad blues depress lonely crying tired failure
+se
+worthy capable goodqual attitude
+1 1 depression sad    1.000    0.000
+1 1 depression blues    0.793    0.037
+1 1 depression depress    0.961    0.038
+1 1 depression lonely    0.954    0.041
+1 1 depression crying    0.610    0.034
+1 1 depression tired    0.669    0.041
+1 1 depression failure    0.505    0.027
+1 1 se worthy    1.000    0.000
+1 1 se capable    0.909    0.075
+1 1 se goodqual    0.880    0.070
+1 1 se attitude    0.822    0.072
+2 1 se depression   -0.172    0.023
+4 1 sad    0.246    0.018
+4 1 blues    0.281    0.017
+4 1 depress    0.222    0.016
+4 1 lonely    0.329    0.021
+4 1 crying    0.312    0.018
+4 1 tired    0.463    0.026
+4 1 failure    0.182    0.011
+4 1 worthy    0.400    0.031
+4 1 capable    0.506    0.034
+4 1 goodqual    0.340    0.026
+4 1 attitude    0.505    0.032
+5 1 depression    0.548    0.042
+5 1 se    0.349    0.041

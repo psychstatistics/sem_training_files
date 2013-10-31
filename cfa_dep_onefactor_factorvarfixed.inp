@@ -1,0 +1,18 @@
+Title:
+	
+	CFA One Factor - Depression itmes
+	Identifying the model by fixing the factor variance to 1
+
+Data:
+
+	File is dep_items.csv;
+
+Variable:
+	
+	Names are sad blues depress lonely crying tired failure;
+
+Model:
+
+	DEPRESSION BY sad*
+				  blues-failure;
+	DEPRESSION@1;

@@ -1,0 +1,29 @@
+Title:
+	
+	Structural Regression
+	4 correlated factors - residual correlation.
+
+Data:
+
+	File is job_satis_data.txt;
+	Type is correlation stdeviations;
+	Nobservations = 263;
+
+Variable:
+	
+	Names are work1 work2 work3 happy mood1 mood2
+  			  perform1 perform2 approval beliefs 
+			  selftalk imagery;
+
+Model:
+
+	CT BY beliefs selftalk imagery;
+	SWB BY happy mood1 mood2;
+	DT BY perform1 perform2 approval;
+	JS BY work1 work2 work3;
+	
+	happy WITH mood2;
+	
+Output:
+
+	MODINDICES(4);

@@ -1,0 +1,158 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+10/08/2013   3:36 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	ANOVA example
+
+  Data:
+
+  	File is anova_example_data.csv;
+
+  Variable:
+  	
+  	Names are dep1 dep2 dep3;
+  		
+  Model:
+
+  	dep1 (b);
+  	dep2 (b);
+  	dep3 (b);
+  	[dep1];
+  	[dep2];
+  	[dep3];
+  	
+  	
+
+
+
+
+*** WARNING in MODEL command
+  All variables are uncorrelated with all other variables in the model.
+  Check that this is what is intended.
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+
+ANOVA example
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                          30
+
+Number of dependent variables                                    3
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   DEP1        DEP2        DEP3
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  anova_example_data.csv
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        4
+
+Loglikelihood
+
+          H0 Value                        -130.939
+          H1 Value                        -128.724
+
+Information Criteria
+
+          Akaike (AIC)                     269.877
+          Bayesian (BIC)                   275.482
+          Sample-Size Adjusted BIC         263.028
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              4.430
+          Degrees of Freedom                     5
+          P-Value                           0.4894
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.239
+          Probability RMSEA <= .05           0.533
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.350
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                              3.977
+          Degrees of Freedom                     3
+          P-Value                           0.2639
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.130
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Means
+    DEP1               0.190      0.189      1.004      0.315
+    DEP2               0.151      0.189      0.798      0.425
+    DEP3               0.923      0.189      4.877      0.000
+
+ Variances
+    DEP1               1.075      0.160      6.708      0.000
+    DEP2               1.075      0.160      6.708      0.000
+    DEP3               1.075      0.160      6.708      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.716E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  15:36:33
+        Ending Time:  15:36:34
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

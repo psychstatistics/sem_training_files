@@ -1,0 +1,22 @@
+Title:
+	
+	Structural Regression
+	1 common factor
+
+Data:
+
+	File is job_satis_data.txt;
+	Type is correlation stdeviations;
+	Nobservations = 263;
+
+Variable:
+	
+	Names are work1 work2 work3 happy mood1 mood2
+  			  perform1 perform2 approval beliefs 
+			  selftalk imagery;
+
+Model:
+
+	CT BY work1-imagery;
+	
+

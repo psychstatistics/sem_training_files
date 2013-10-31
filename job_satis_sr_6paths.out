@@ -1,0 +1,219 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+10/30/2013  11:53 AM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	Structural Regression
+  	6 paths among the latent variables
+  	just identified
+
+  Data:
+
+  	File is job_satis_data.txt;
+  	Type is correlation stdeviations;
+  	Nobservations = 263;
+
+  Variable:
+  	
+  	Names are work1 work2 work3 happy mood1 mood2
+    			  perform1 perform2 approval beliefs
+  			  selftalk imagery;
+
+  Model:
+
+  	
+  	! Measurement Part;
+  	
+  	CT BY beliefs selftalk imagery;
+  	SWB BY happy mood1 mood2;
+  	DT BY perform1 perform2 approval;
+  	JS BY work1 work2 work3;
+  	
+  	happy WITH mood2;
+  	
+  	! Structural Part;
+  	
+  	JS ON SWB DT CT;
+  	SWB ON DT CT;
+  	DT ON CT;
+  	
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Structural Regression
+6 paths among the latent variables
+just identified
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         263
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            4
+
+Observed dependent variables
+
+  Continuous
+   WORK1       WORK2       WORK3       HAPPY       MOOD1       MOOD2
+   PERFORM1    PERFORM2    APPROVAL    BELIEFS     SELFTALK    IMAGERY
+
+Continuous latent variables
+   CT          SWB         DT          JS
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  job_satis_data.txt
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       31
+
+Loglikelihood
+
+          H0 Value                       -3121.267
+          H1 Value                       -3092.936
+
+Information Criteria
+
+          Akaike (AIC)                    6304.534
+          Bayesian (BIC)                  6415.270
+          Sample-Size Adjusted BIC        6316.985
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             56.662
+          Degrees of Freedom                    47
+          P-Value                           0.1579
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.028
+          90 Percent C.I.                    0.000  0.052
+          Probability RMSEA <= .05           0.936
+
+CFI/TLI
+
+          CFI                                0.991
+          TLI                                0.987
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1087.490
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.037
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CT       BY
+    BELIEFS            1.000      0.000    999.000    999.000
+    SELFTALK           1.056      0.178      5.922      0.000
+    IMAGERY            1.890      0.331      5.717      0.000
+
+ SWB      BY
+    HAPPY              1.000      0.000    999.000    999.000
+    MOOD1              1.490      0.219      6.799      0.000
+    MOOD2              0.821      0.126      6.535      0.000
+
+ DT       BY
+    PERFORM1           1.000      0.000    999.000    999.000
+    PERFORM2           1.133      0.080     14.105      0.000
+    APPROVAL           0.993      0.089     11.175      0.000
+
+ JS       BY
+    WORK1              1.000      0.000    999.000    999.000
+    WORK2              1.035      0.081     12.770      0.000
+    WORK3              0.891      0.073     12.144      0.000
+
+ JS       ON
+    SWB                0.797      0.202      3.946      0.000
+    DT                -0.242      0.130     -1.863      0.062
+    CT                 0.160      0.120      1.331      0.183
+
+ SWB      ON
+    DT                -0.365      0.064     -5.664      0.000
+    CT                 0.067      0.061      1.096      0.273
+
+ DT       ON
+    CT                -0.131      0.078     -1.681      0.093
+
+ HAPPY    WITH
+    MOOD2             -0.043      0.018     -2.390      0.017
+
+ Variances
+    CT                 0.212      0.049      4.285      0.000
+
+ Residual Variances
+    WORK1              0.260      0.042      6.231      0.000
+    WORK2              0.368      0.050      7.394      0.000
+    WORK3              0.384      0.044      8.692      0.000
+    HAPPY              0.173      0.025      6.877      0.000
+    MOOD1              0.261      0.044      5.970      0.000
+    MOOD2              0.178      0.022      8.133      0.000
+    PERFORM1           0.106      0.016      6.783      0.000
+    PERFORM2           0.068      0.017      3.975      0.000
+    APPROVAL           0.300      0.029     10.186      0.000
+    BELIEFS            0.292      0.043      6.862      0.000
+    SELFTALK           1.023      0.097     10.496      0.000
+    IMAGERY            0.242      0.123      1.965      0.049
+    SWB                0.108      0.025      4.398      0.000
+    DT                 0.231      0.031      7.579      0.000
+    JS                 0.467      0.066      7.063      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.855E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:53:31
+        Ending Time:  11:53:32
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

@@ -1,0 +1,189 @@
+Mplus VERSION 7.1 (Mac)
+MUTHEN & MUTHEN
+06/17/2013   4:50 PM
+
+INPUT INSTRUCTIONS
+
+  Title:
+  	
+  	Correlation between anxiety, depression, and QoL
+
+  Data:
+
+  	File is anx_dep_qol.csv;
+
+  Variable:
+  	
+  	Names are
+  		anx dep qol;
+  		
+  Model:
+
+  	anx WITH dep qol;
+  	dep WITH qol;
+
+  	
+  Output:
+  	STDYX;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Correlation between anxiety, depression, and QoL
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of dependent variables                                    3
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   ANX         DEP         QOL
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  anx_dep_qol.csv
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        9
+
+Loglikelihood
+
+          H0 Value                        -371.376
+          H1 Value                        -371.376
+
+Information Criteria
+
+          Akaike (AIC)                     760.752
+          Bayesian (BIC)                   784.198
+          Sample-Size Adjusted BIC         755.774
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                             62.115
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ANX      WITH
+    DEP                0.498      0.100      4.999      0.000
+    QOL                0.296      0.092      3.224      0.001
+
+ DEP      WITH
+    QOL                0.356      0.091      3.911      0.000
+
+ Means
+    ANX                0.173      0.095      1.823      0.068
+    DEP                0.151      0.091      1.651      0.099
+    QOL               -0.037      0.092     -0.399      0.690
+
+ Variances
+    ANX                0.896      0.127      7.072      0.000
+    DEP                0.832      0.118      7.072      0.000
+    QOL                0.843      0.119      7.071      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ANX      WITH
+    DEP                0.577      0.067      8.655      0.000
+    QOL                0.341      0.088      3.853      0.000
+
+ DEP      WITH
+    QOL                0.425      0.082      5.186      0.000
+
+ Means
+    ANX                0.182      0.101      1.808      0.071
+    DEP                0.165      0.101      1.640      0.101
+    QOL               -0.040      0.100     -0.399      0.690
+
+ Variances
+    ANX                1.000      0.000    999.000    999.000
+    DEP                1.000      0.000    999.000    999.000
+    QOL                1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.449E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  16:50:38
+        Ending Time:  16:50:39
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

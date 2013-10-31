@@ -1,12 +1,14 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/08/2013   3:36 PM
+10/31/2013   1:14 PM
 
 INPUT INSTRUCTIONS
 
   Title:
   	
-  	ANOVA example
+  	ANOVA example;
+  	Unconstrained Means;
+  	Variances Constrained (Homoscedastic);
 
   Data:
 
@@ -14,19 +16,24 @@ INPUT INSTRUCTIONS
 
   Variable:
   	
-  	Names are dep1 dep2 dep3;
+  	Names are dep tx;
+  	Grouping is tx (1 = CBT, 2 = IPT, 3 = Control);	
   		
   Model:
-
-  	dep1 (b);
-  	dep2 (b);
-  	dep3 (b);
-  	[dep1];
-  	[dep2];
-  	[dep3];
   	
-  	
+  	[dep] (mu1);
+  	dep	(sig);
 
+  Model IPT:
+  	
+  	[dep] (mu2);
+  	dep	(sig);
+  	
+  Model Control:
+  	
+  	[dep] (mu3);
+  	dep	(sig);	
+  	
 
 
 
@@ -39,22 +46,31 @@ INPUT INSTRUCTIONS
 
 
 
-ANOVA example
+ANOVA example;
+Unconstrained Means;
+Variances Constrained (Homoscedastic);
 
 SUMMARY OF ANALYSIS
 
-Number of groups                                                 1
-Number of observations                                          30
+Number of groups                                                 3
+Number of observations
+   Group CBT                                                    30
+   Group IPT                                                    30
+   Group CONTROL                                                30
+   Total sample size                                            90
 
-Number of dependent variables                                    3
+Number of dependent variables                                    1
 Number of independent variables                                  0
 Number of continuous latent variables                            0
 
 Observed dependent variables
 
   Continuous
-   DEP1        DEP2        DEP3
+   DEP
 
+Variables with special functions
+
+  Grouping variable     TX
 
 Estimator                                                       ML
 Information matrix                                        OBSERVED
@@ -80,41 +96,47 @@ Number of Free Parameters                        4
 Loglikelihood
 
           H0 Value                        -130.939
-          H1 Value                        -128.724
+          H1 Value                        -130.712
 
 Information Criteria
 
           Akaike (AIC)                     269.877
-          Bayesian (BIC)                   275.482
-          Sample-Size Adjusted BIC         263.028
+          Bayesian (BIC)                   279.877
+          Sample-Size Adjusted BIC         267.252
             (n* = (n + 2) / 24)
 
 Chi-Square Test of Model Fit
 
-          Value                              4.430
-          Degrees of Freedom                     5
-          P-Value                           0.4894
+          Value                              0.452
+          Degrees of Freedom                     2
+          P-Value                           0.7975
+
+Chi-Square Contribution From Each Group
+
+          CBT                                0.279
+          IPT                                0.042
+          CONTROL                            0.132
 
 RMSEA (Root Mean Square Error Of Approximation)
 
           Estimate                           0.000
-          90 Percent C.I.                    0.000  0.239
-          Probability RMSEA <= .05           0.533
+          90 Percent C.I.                    0.000  0.228
+          Probability RMSEA <= .05           0.811
 
 CFI/TLI
 
           CFI                                1.000
-          TLI                                1.350
+          TLI                                1.000
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                              3.977
-          Degrees of Freedom                     3
-          P-Value                           0.2639
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
 
 SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.130
+          Value                              0.071
 
 
 
@@ -123,15 +145,29 @@ MODEL RESULTS
                                                     Two-Tailed
                     Estimate       S.E.  Est./S.E.    P-Value
 
+Group CBT
+
  Means
-    DEP1               0.190      0.189      1.004      0.315
-    DEP2               0.151      0.189      0.798      0.425
-    DEP3               0.923      0.189      4.877      0.000
+    DEP                0.190      0.189      1.004      0.315
 
  Variances
-    DEP1               1.075      0.160      6.708      0.000
-    DEP2               1.075      0.160      6.708      0.000
-    DEP3               1.075      0.160      6.708      0.000
+    DEP                1.075      0.160      6.708      0.000
+
+Group IPT
+
+ Means
+    DEP                0.151      0.189      0.798      0.425
+
+ Variances
+    DEP                1.075      0.160      6.708      0.000
+
+Group CONTROL
+
+ Means
+    DEP                0.923      0.189      4.877      0.000
+
+ Variances
+    DEP                1.075      0.160      6.708      0.000
 
 
 QUALITY OF NUMERICAL RESULTS
@@ -140,9 +176,9 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  15:36:33
-        Ending Time:  15:36:34
-       Elapsed Time:  00:00:01
+     Beginning Time:  13:14:06
+        Ending Time:  13:14:06
+       Elapsed Time:  00:00:00
 
 
 

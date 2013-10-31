@@ -1,6 +1,8 @@
 Title:
 	
-	ANOVA example
+	ANOVA example;
+	Unconstrained Means;
+	Variances Constrained (Homoscedastic);
 
 Data:
 
@@ -8,16 +10,21 @@ Data:
 
 Variable:
 	
-	Names are dep1 dep2 dep3;
+	Names are dep tx;
+	Grouping is tx (1 = CBT, 2 = IPT, 3 = Control);	
 		
 Model:
-
-	dep1 (b);
-	dep2 (b);
-	dep3 (b);
-	[dep1];
-	[dep2];
-	[dep3];
 	
-	
+	[dep] (mu1);
+	dep	(sig);
 
+Model IPT:
+	
+	[dep] (mu2);
+	dep	(sig);
+	
+Model Control:
+	
+	[dep] (mu3);
+	dep	(sig);	
+	

@@ -1,6 +1,6 @@
-Mplus VERSION 7 (Mac)
+Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-08/29/2013   3:55 PM
+10/31/2013   1:10 PM
 
 INPUT INSTRUCTIONS
 
@@ -14,17 +14,23 @@ INPUT INSTRUCTIONS
 
   Variable:
   	
-  	Names are dep1 dep2 dep3;
+  	Names are dep tx;
+  	Grouping is tx (1 = CBT, 2 = IPT, 3 = Control);	
   		
   Model:
-
-  	dep1 (b);
-  	dep2 (b);
-  	dep3 (b);
-  	[dep1] (a);
-  	[dep2] (a);
-  	[dep3] (a);
   	
+  	[dep] (mu);
+  	dep	(sig);
+
+  Model IPT:
+  	
+  	[dep] (mu);
+  	dep	(sig);
+  	
+  Model Control:
+  	
+  	[dep] (mu);
+  	dep	(sig);	
   	
 
 
@@ -42,18 +48,25 @@ ANOVA example
 
 SUMMARY OF ANALYSIS
 
-Number of groups                                                 1
-Number of observations                                          30
+Number of groups                                                 3
+Number of observations
+   Group CBT                                                    30
+   Group IPT                                                    30
+   Group CONTROL                                                30
+   Total sample size                                            90
 
-Number of dependent variables                                    3
+Number of dependent variables                                    1
 Number of independent variables                                  0
 Number of continuous latent variables                            0
 
 Observed dependent variables
 
   Continuous
-   DEP1        DEP2        DEP3
+   DEP
 
+Variables with special functions
+
+  Grouping variable     TX
 
 Estimator                                                       ML
 Information matrix                                        OBSERVED
@@ -79,41 +92,47 @@ Number of Free Parameters                        2
 Loglikelihood
 
           H0 Value                        -135.931
-          H1 Value                        -128.724
+          H1 Value                        -130.712
 
 Information Criteria
 
           Akaike (AIC)                     275.861
-          Bayesian (BIC)                   278.663
-          Sample-Size Adjusted BIC         272.436
+          Bayesian (BIC)                   280.861
+          Sample-Size Adjusted BIC         274.548
             (n* = (n + 2) / 24)
 
 Chi-Square Test of Model Fit
 
-          Value                             14.413
-          Degrees of Freedom                     7
-          P-Value                           0.0443
+          Value                             10.436
+          Degrees of Freedom                     4
+          P-Value                           0.0337
+
+Chi-Square Contribution From Each Group
+
+          CBT                                1.345
+          IPT                                2.208
+          CONTROL                            6.883
 
 RMSEA (Root Mean Square Error Of Approximation)
 
-          Estimate                           0.188
-          90 Percent C.I.                    0.029  0.326
-          Probability RMSEA <= .05           0.062
+          Estimate                           0.232
+          90 Percent C.I.                    0.059  0.409
+          Probability RMSEA <= .05           0.045
 
 CFI/TLI
 
           CFI                                0.000
-          TLI                               -2.252
+          TLI                                1.000
 
 Chi-Square Test of Model Fit for the Baseline Model
 
-          Value                              3.977
-          Degrees of Freedom                     3
-          P-Value                           0.2639
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
 
 SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.260
+          Value                              0.285
 
 
 
@@ -122,15 +141,29 @@ MODEL RESULTS
                                                     Two-Tailed
                     Estimate       S.E.  Est./S.E.    P-Value
 
+Group CBT
+
  Means
-    DEP1               0.421      0.115      3.648      0.000
-    DEP2               0.421      0.115      3.648      0.000
-    DEP3               0.421      0.115      3.648      0.000
+    DEP                0.421      0.115      3.648      0.000
 
  Variances
-    DEP1               1.201      0.179      6.708      0.000
-    DEP2               1.201      0.179      6.708      0.000
-    DEP3               1.201      0.179      6.708      0.000
+    DEP                1.201      0.179      6.708      0.000
+
+Group IPT
+
+ Means
+    DEP                0.421      0.115      3.648      0.000
+
+ Variances
+    DEP                1.201      0.179      6.708      0.000
+
+Group CONTROL
+
+ Means
+    DEP                0.421      0.115      3.648      0.000
+
+ Variances
+    DEP                1.201      0.179      6.708      0.000
 
 
 QUALITY OF NUMERICAL RESULTS
@@ -139,8 +172,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  15:55:42
-        Ending Time:  15:55:42
+     Beginning Time:  13:10:05
+        Ending Time:  13:10:05
        Elapsed Time:  00:00:00
 
 
@@ -154,4 +187,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2012 Muthen & Muthen
+Copyright (c) 1998-2013 Muthen & Muthen

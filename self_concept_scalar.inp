@@ -1,0 +1,63 @@
+TITLE:
+
+	Scalar Invariance Model
+	Self-Concept - Peer Relationships
+
+DATA:
+
+	FILE IS self_concept_data.txt;
+	TYPE IS correlation means stdeviations;
+	NOBSERVATIONS = 134 251;
+	NGROUPS = 2;
+	
+VARIABLE:
+	
+	NAMES ARE phyab1 phyab2 phyab3 phyab4 
+			  appear1 appear2 appear3 appear4 
+			  peerrel1 peerrel2 peerrel3 peerrel4 
+			  parrel1 parrel2 parrel3 parrel4; 
+			  
+	USEVARIABLES ARE peerrel1 peerrel2 peerrel3 peerrel4;
+	
+MODEL:
+
+	PEER BY peerrel1* (l1) 
+			peerrel2 (l2)
+			peerrel3 (l3)
+			peerrel4 (l4);
+	
+	PEER@1;
+	[PEER@0];
+
+	[peerrel1] (i1);
+	[peerrel2] (i2);
+	[peerrel3] (i3); 
+	[peerrel4] (i4);
+
+	peerrel1;
+	peerrel2;
+	peerrel3; 
+	peerrel4;
+	
+MODEL g2:
+
+	PEER BY peerrel1* (l1) 
+			peerrel2 (l2)
+			peerrel3 (l3)
+			peerrel4 (l4);
+
+	PEER*;
+	[PEER*];
+
+	[peerrel1] (i1);
+	[peerrel2] (i2);
+	[peerrel3] (i3); 
+	[peerrel4] (i4);
+
+	peerrel1;
+	peerrel2;
+	peerrel3; 
+	peerrel4;
+
+	
+	

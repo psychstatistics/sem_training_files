@@ -1,0 +1,47 @@
+TITLE: 
+	
+	Mediation Model
+	Model 2a
+	Creating Indirect Effects Manually
+
+DATA:
+
+	FILE IS read_data.csv;
+
+VARIABLE:
+	
+	NAMES ARE att4 math7 read7 read21 vocab4 
+			  adopted male momed;
+	USEVARIABLES ARE att4 math7 read7 read21;
+	MISSING ARE ALL (-9999);
+	
+ANALYSIS:
+
+	BOOTSTRAP = 1000;
+	PROCESSORS = 2;
+	
+MODEL:
+	
+	read21 ON read7 (b1)
+			  math7 (b2)
+			  att4 (cprime);
+	read7 ON att4 (a1);
+	math7 ON att4 (a2);
+	
+MODEL CONSTRAINT:
+	
+	NEW (ind1 ind2 totmed total);
+	ind1 = a1*b1;
+	ind2 = a2*b2;
+	totmed = ind1 + ind2;
+	total = ind1 + ind2 + cprime;
+	
+	
+OUTPUT:
+
+	STANDARDIZED (STDYX);
+	CINTERVAL;
+	
+	
+	
+	

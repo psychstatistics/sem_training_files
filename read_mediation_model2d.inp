@@ -1,0 +1,45 @@
+TITLE: 
+	
+	Mediation Model
+	Model 2c
+	Correlated Residuals of Mediators
+
+DATA:
+
+	FILE IS read_data.csv;
+
+VARIABLE:
+	
+	NAMES ARE att4 math7 read7 read21 vocab4 
+			  adopted male momed;
+	USEVARIABLES ARE att4 math7 read7 read21;
+	MISSING ARE ALL (-9999);
+	
+ANALYSIS:
+	
+	BOOTSTRAP = 1000;
+	PROCESSORS = 2;
+	
+MODEL:
+	
+	read21 ON read7 (b1)
+			  math7 (b2)
+			  att4 (cprime);
+	read7 ON att4 (a1);
+	math7 ON att4 (a2);
+	
+	read7 WITH math7;
+	
+MODEL INDIRECT:
+	
+	read21 IND att4;
+	
+OUTPUT:
+
+	STANDARDIZED (STDYX);
+	CINTERVAL;
+
+	
+	
+	
+	

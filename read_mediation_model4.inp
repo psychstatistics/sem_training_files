@@ -1,0 +1,52 @@
+TITLE: 
+	
+	Mediation Model
+	Model 3
+
+DATA:
+
+	FILE IS read_data.csv;
+
+VARIABLE:
+	
+	NAMES ARE att4 math7 read7 read21 vocab4 adopted male momed;
+	USEVARIABLES ARE att4 math7 read7 read21 vocab4 adopted male momed;
+	MISSING ARE ALL (-9999);
+	
+ANALYSIS:
+
+	BOOTSTRAP = 1000;
+	PROCESSORS = 2;
+	
+MODEL:
+	
+	read21 ON read7
+			  math7
+			  att4
+			  vocab4 adopted male momed;
+	read7 ON att4
+			 vocab4 adopted male momed;
+	math7 ON att4
+			 vocab4 adopted male momed;
+	
+	read7 WITH math7;
+	
+	
+	
+MODEL INDIRECT:
+
+	read21 IND att4;
+	
+!MODEL CONSTRAINT:
+
+!	NEW (ab);
+!	ab = a*b;
+	
+OUTPUT:
+
+	STANDARDIZED (STDYX);
+	CINTERVAL;
+	
+	
+	
+	

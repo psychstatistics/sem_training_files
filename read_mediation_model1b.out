@@ -1,0 +1,387 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+11/05/2013   1:54 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  	
+  	Mediation Model
+  	Model 1b
+  	Using MODEL INDIRECT COMMAND
+
+  DATA:
+
+  	FILE IS read_data.csv;
+
+  VARIABLE:
+  	
+  	NAMES ARE att4 math7 read7 read21
+  			  vocab4 adopted male momed;
+  	USEVARIABLES ARE att4 read7 read21;
+  	MISSING ARE ALL (-9999);
+  	
+  MODEL:
+  	
+  	read21 ON read7 (a)
+  			  att4 (cprime);
+  	read7 ON att4 (b);
+  	
+  MODEL INDIRECT:
+
+  	read21 IND att4;
+  	
+  MODEL CONSTRAINT:
+
+  	NEW (indirect total);
+  	indirect = a*b;
+  	total = (a*b) + cprime;
+  	
+  OUTPUT:
+
+  	STANDARDIZED (STDYX);
+  	CINTERVAL;
+  	
+  	
+  	
+  	
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables except
+  x-variables.  These cases were not included in the analysis.
+  Number of cases with missing on all variables except x-variables:  17
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+
+Mediation Model
+Model 1b
+Using MODEL INDIRECT COMMAND
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         413
+
+Number of dependent variables                                    2
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   READ7       READ21
+
+Observed independent variables
+   ATT4
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  read_data.csv
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             3
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              READ7         READ21        ATT4
+              ________      ________      ________
+ READ7          0.944
+ READ21         0.816         0.872
+ ATT4           0.944         0.872         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        7
+
+Loglikelihood
+
+          H0 Value                       -2587.469
+          H1 Value                       -2587.469
+
+Information Criteria
+
+          Akaike (AIC)                    5188.938
+          Bayesian (BIC)                  5217.103
+          Sample-Size Adjusted BIC        5194.890
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            120.458
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ READ21   ON
+    READ7              0.540      0.047     11.472      0.000
+    ATT4               0.209      0.124      1.684      0.092
+
+ READ7    ON
+    ATT4               0.333      0.131      2.542      0.011
+
+ Intercepts
+    READ7             25.574      2.389     10.706      0.000
+    READ21            52.753      2.554     20.659      0.000
+
+ Residual Variances
+    READ7             63.913      4.581     13.952      0.000
+    READ21            51.358      3.901     13.166      0.000
+
+ New/Additional Parameters
+    INDIRECT           0.180      0.073      2.480      0.013
+    TOTAL              0.389      0.140      2.775      0.006
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ READ21   ON
+    READ7              0.515      0.039     13.197      0.000
+    ATT4               0.076      0.045      1.689      0.091
+
+ READ7    ON
+    ATT4               0.127      0.050      2.564      0.010
+
+ Intercepts
+    READ7              3.173      0.336      9.444      0.000
+    READ21             6.242      0.452     13.818      0.000
+
+ Residual Variances
+    READ7              0.984      0.013     78.088      0.000
+    READ21             0.719      0.040     17.768      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    READ7              0.016      0.013      1.282      0.200
+    READ21             0.281      0.040      6.945      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.702E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from ATT4 to READ21
+
+  Total                0.389      0.140      2.775      0.006
+  Total indirect       0.180      0.073      2.480      0.013
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4               0.180      0.073      2.480      0.013
+
+  Direct
+    READ21
+    ATT4               0.209      0.124      1.684      0.092
+
+
+STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from ATT4 to READ21
+
+  Total                0.141      0.050      2.806      0.005
+  Total indirect       0.065      0.026      2.511      0.012
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4               0.065      0.026      2.511      0.012
+
+  Direct
+    READ21
+    ATT4               0.076      0.045      1.689      0.091
+
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ READ21   ON
+    READ7            0.419       0.448       0.463       0.540       0.618       0.632       0.661
+    ATT4            -0.110      -0.034       0.005       0.209       0.412       0.451       0.528
+
+ READ7    ON
+    ATT4            -0.004       0.076       0.118       0.333       0.549       0.590       0.671
+
+ Intercepts
+    READ7           19.421      20.892      21.644      25.574      29.503      30.256      31.727
+    READ21          46.176      47.748      48.553      52.753      56.954      57.758      59.331
+
+ Residual Variances
+    READ7           52.113      54.934      56.377      63.913      71.448      72.891      75.712
+    READ21          41.310      43.712      44.941      51.358      57.775      59.003      61.406
+
+ New/Additional Parameters
+    INDIRECT        -0.007       0.038       0.061       0.180       0.299       0.322       0.367
+    TOTAL            0.028       0.114       0.158       0.389       0.619       0.663       0.749
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ READ21   ON
+    READ7            0.415       0.439       0.451       0.515       0.579       0.592       0.616
+    ATT4            -0.040      -0.012       0.002       0.076       0.150       0.164       0.192
+
+ READ7    ON
+    ATT4            -0.001       0.030       0.046       0.127       0.209       0.224       0.255
+
+ Intercepts
+    READ7            2.308       2.514       2.620       3.173       3.726       3.831       4.038
+    READ21           5.078       5.356       5.499       6.242       6.985       7.127       7.405
+
+ Residual Variances
+    READ7            0.951       0.959       0.963       0.984       1.005       1.009       1.016
+    READ21           0.615       0.640       0.652       0.719       0.786       0.798       0.823
+
+
+CONFIDENCE INTERVALS OF TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+Effects from ATT4 to READ21
+
+  Total              0.028       0.114       0.158       0.389       0.619       0.663       0.749
+  Total indirect    -0.007       0.038       0.061       0.180       0.299       0.322       0.367
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4            -0.007       0.038       0.061       0.180       0.299       0.322       0.367
+
+  Direct
+    READ21
+    ATT4            -0.110      -0.034       0.005       0.209       0.412       0.451       0.528
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT,
+AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+Effects from ATT4 to READ21
+
+  Total              0.012       0.043       0.058       0.141       0.224       0.240       0.271
+  Total indirect    -0.002       0.014       0.023       0.065       0.108       0.117       0.133
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4            -0.002       0.014       0.023       0.065       0.108       0.117       0.133
+
+  Direct
+    READ21
+    ATT4            -0.040      -0.012       0.002       0.076       0.150       0.164       0.192
+
+
+
+     Beginning Time:  13:54:52
+        Ending Time:  13:54:52
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

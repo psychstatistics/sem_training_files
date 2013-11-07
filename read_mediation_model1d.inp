@@ -1,0 +1,38 @@
+TITLE: 
+	
+	Mediation Model
+	Model 1d
+	Complete Mediation
+
+DATA:
+
+	FILE IS read_data.csv;
+
+VARIABLE:
+	
+	NAMES ARE att4 math7 read7 read21 
+			  vocab4 adopted male momed;
+	USEVARIABLES ARE att4 read7 read21;
+	MISSING ARE ALL (-9999);
+	
+ANALYSIS:
+
+	BOOTSTRAP = 1000;
+		
+MODEL:
+	
+	read21 ON read7 (a);
+	read7 ON att4 (b);
+	
+MODEL INDIRECT:
+
+	read21 IND att4;
+	
+OUTPUT:
+
+	STANDARDIZED (STDYX);
+	CINTERVAL;
+	
+	
+	
+	

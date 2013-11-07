@@ -1,0 +1,295 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+11/06/2013   3:11 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  	
+  	Mediation Model
+  	Model 2a
+  	Creating Indirect Effects Manually
+
+  DATA:
+
+  	FILE IS read_data.csv;
+
+  VARIABLE:
+  	
+  	NAMES ARE att4 math7 read7 read21 vocab4
+  			  adopted male momed;
+  	USEVARIABLES ARE att4 math7 read7 read21;
+  	MISSING ARE ALL (-9999);
+  	
+  ANALYSIS:
+
+  	BOOTSTRAP = 1000;
+  	PROCESSORS = 2;
+  	
+  MODEL:
+  	
+  	read21 ON read7 (b1)
+  			  math7 (b2)
+  			  att4 (cprime);
+  	read7 ON att4 (a1);
+  	math7 ON att4 (a2);
+  	
+  MODEL CONSTRAINT:
+  	
+  	NEW (ind1 ind2 totmed total);
+  	ind1 = a1*b1;
+  	ind2 = a2*b2;
+  	totmed = ind1 + ind2;
+  	total = ind1 + ind2 + cprime;
+  	
+  	
+  OUTPUT:
+
+  	STANDARDIZED (STDYX);
+  	CINTERVAL;
+  	
+  	
+  	
+  	
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables except
+  x-variables.  These cases were not included in the analysis.
+  Number of cases with missing on all variables except x-variables:  16
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+
+Mediation Model
+Model 2a
+Creating Indirect Effects Manually
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         414
+
+Number of dependent variables                                    3
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MATH7       READ7       READ21
+
+Observed independent variables
+   ATT4
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Number of bootstrap draws
+    Requested                                                 1000
+    Completed                                                 1000
+
+Input data file(s)
+  read_data.csv
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             6
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              MATH7         READ7         READ21        ATT4
+              ________      ________      ________      ________
+ MATH7          0.959
+ READ7          0.940         0.942
+ READ21         0.829         0.814         0.870
+ ATT4           0.959         0.942         0.870         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       11
+
+Loglikelihood
+
+          H0 Value                       -3547.033
+          H1 Value                       -3533.191
+
+Information Criteria
+
+          Akaike (AIC)                    7116.065
+          Bayesian (BIC)                  7160.350
+          Sample-Size Adjusted BIC        7125.444
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             27.683
+          Degrees of Freedom                     1
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.254
+          90 Percent C.I.                    0.178  0.339
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.828
+          TLI                               -0.031
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            161.275
+          Degrees of Freedom                     6
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.082
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ READ21   ON
+    READ7              0.511      0.052      9.802      0.000
+    MATH7              0.338      0.122      2.778      0.005
+    ATT4               0.181      0.132      1.369      0.171
+
+ READ7    ON
+    ATT4               0.333      0.140      2.374      0.018
+
+ MATH7    ON
+    ATT4               0.123      0.047      2.624      0.009
+
+ Intercepts
+    MATH7              8.529      0.863      9.887      0.000
+    READ7             25.567      2.483     10.296      0.000
+    READ21            50.554      2.886     17.518      0.000
+
+ Residual Variances
+    MATH7              7.465      0.472     15.826      0.000
+    READ7             63.924      4.892     13.068      0.000
+    READ21            50.609      6.352      7.967      0.000
+
+ New/Additional Parameters
+    IND1               0.170      0.073      2.339      0.019
+    IND2               0.041      0.023      1.790      0.074
+    TOTMED             0.212      0.081      2.620      0.009
+    TOTAL              0.392      0.145      2.704      0.007
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+ READ21   ON
+    READ7              0.493
+    MATH7              0.112
+    ATT4               0.067
+
+ READ7    ON
+    ATT4               0.127
+
+ MATH7    ON
+    ATT4               0.137
+
+ Intercepts
+    MATH7              3.092
+    READ7              3.172
+    READ21             6.060
+
+ Residual Variances
+    MATH7              0.981
+    READ7              0.984
+    READ21             0.727
+
+
+R-SQUARE
+
+    Observed
+    Variable        Estimate
+
+    MATH7              0.019
+    READ7              0.016
+    READ21             0.273
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ READ21   ON
+    READ7            0.376       0.409       0.425       0.511       0.596       0.613       0.645
+    MATH7            0.025       0.099       0.138       0.338       0.538       0.576       0.651
+    ATT4            -0.159      -0.078      -0.036       0.181       0.398       0.440       0.521
+
+ READ7    ON
+    ATT4            -0.028       0.058       0.102       0.333       0.564       0.609       0.695
+
+ MATH7    ON
+    ATT4             0.002       0.031       0.046       0.123       0.199       0.214       0.243
+
+ Intercepts
+    MATH7            6.307       6.838       7.110       8.529       9.948      10.220      10.751
+    READ7           19.171      20.700      21.483      25.567      29.652      30.434      31.964
+    READ21          43.121      44.898      45.807      50.554      55.301      56.210      57.988
+
+ Residual Variances
+    MATH7            6.250       6.541       6.689       7.465       8.241       8.390       8.680
+    READ7           51.324      54.336      55.877      63.924      71.971      73.512      76.524
+    READ21          34.246      38.158      40.159      50.609      61.058      63.059      66.971
+
+ New/Additional Parameters
+    IND1            -0.017       0.028       0.050       0.170       0.290       0.313       0.358
+    IND2            -0.018      -0.004       0.003       0.041       0.079       0.087       0.101
+    TOTMED           0.004       0.053       0.079       0.212       0.345       0.370       0.420
+    TOTAL            0.019       0.108       0.154       0.392       0.631       0.677       0.766
+
+
+     Beginning Time:  15:11:02
+        Ending Time:  15:11:04
+       Elapsed Time:  00:00:02
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

@@ -1,0 +1,328 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+11/06/2013  12:20 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  	
+  	Mediation Model
+  	Model 1d
+  	Complete Mediation
+
+  DATA:
+
+  	FILE IS read_data.csv;
+
+  VARIABLE:
+  	
+  	NAMES ARE att4 math7 read7 read21
+  			  vocab4 adopted male momed;
+  	USEVARIABLES ARE att4 read7 read21;
+  	MISSING ARE ALL (-9999);
+  	
+  ANALYSIS:
+
+  	BOOTSTRAP = 1000;
+  		
+  MODEL:
+  	
+  	read21 ON read7 (a);
+  	read7 ON att4 (b);
+  	
+  MODEL INDIRECT:
+
+  	read21 IND att4;
+  	
+  OUTPUT:
+
+  	STANDARDIZED (STDYX);
+  	CINTERVAL;
+  	
+  	
+  	
+  	
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables except
+  x-variables.  These cases were not included in the analysis.
+  Number of cases with missing on all variables except x-variables:  17
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+
+Mediation Model
+Model 1d
+Complete Mediation
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         413
+
+Number of dependent variables                                    2
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   READ7       READ21
+
+Observed independent variables
+   ATT4
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Number of bootstrap draws
+    Requested                                                 1000
+    Completed                                                 1000
+
+Input data file(s)
+  read_data.csv
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             3
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              READ7         READ21        ATT4
+              ________      ________      ________
+ READ7          0.944
+ READ21         0.816         0.872
+ ATT4           0.944         0.872         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        6
+
+Loglikelihood
+
+          H0 Value                       -2588.883
+          H1 Value                       -2587.469
+
+Information Criteria
+
+          Akaike (AIC)                    5189.766
+          Bayesian (BIC)                  5213.906
+          Sample-Size Adjusted BIC        5194.867
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              2.827
+          Degrees of Freedom                     1
+          P-Value                           0.0927
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.067
+          90 Percent C.I.                    0.000  0.164
+          Probability RMSEA <= .05           0.256
+
+CFI/TLI
+
+          CFI                                0.984
+          TLI                                0.953
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            120.458
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.025
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ READ21   ON
+    READ7              0.550      0.052     10.668      0.000
+
+ READ7    ON
+    ATT4               0.340      0.130      2.607      0.009
+
+ Intercepts
+    READ7             25.447      2.344     10.856      0.000
+    READ21            56.190      1.870     30.047      0.000
+
+ Residual Variances
+    READ7             63.929      4.926     12.978      0.000
+    READ21            51.723      6.472      7.992      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+ READ21   ON
+    READ7              0.525
+
+ READ7    ON
+    ATT4               0.130
+
+ Intercepts
+    READ7              3.156
+    READ21             6.651
+
+ Residual Variances
+    READ7              0.983
+    READ21             0.725
+
+
+R-SQUARE
+
+    Observed
+    Variable        Estimate
+
+    READ7              0.017
+    READ21             0.275
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from ATT4 to READ21
+
+  Total                0.187      0.074      2.518      0.012
+  Total indirect       0.187      0.074      2.518      0.012
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4               0.187      0.074      2.518      0.012
+
+
+STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from ATT4 to READ21
+
+  Total                0.068      0.026      2.584      0.010
+  Total indirect       0.068      0.026      2.584      0.010
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4               0.068      0.026      2.584      0.010
+
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ READ21   ON
+    READ7            0.417       0.449       0.465       0.550       0.634       0.651       0.682
+
+ READ7    ON
+    ATT4             0.004       0.084       0.125       0.340       0.554       0.595       0.675
+
+ Intercepts
+    READ7           19.409      20.853      21.591      25.447      29.303      30.041      31.484
+    READ21          51.374      52.525      53.114      56.190      59.267      59.856      61.007
+
+ Residual Variances
+    READ7           51.241      54.274      55.826      63.929      72.032      73.584      76.617
+    READ21          35.053      39.038      41.077      51.723      62.370      64.408      68.394
+
+
+CONFIDENCE INTERVALS OF TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+Effects from ATT4 to READ21
+
+  Total             -0.004       0.041       0.065       0.187       0.309       0.332       0.378
+  Total indirect    -0.004       0.041       0.065       0.187       0.309       0.332       0.378
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4            -0.004       0.041       0.065       0.187       0.309       0.332       0.378
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT,
+AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+Effects from ATT4 to READ21
+
+  Total              0.000       0.016       0.025       0.068       0.111       0.120       0.136
+  Total indirect     0.000       0.016       0.025       0.068       0.111       0.120       0.136
+
+  Specific indirect
+
+    READ21
+    READ7
+    ATT4             0.000       0.016       0.025       0.068       0.111       0.120       0.136
+
+
+
+     Beginning Time:  12:20:19
+        Ending Time:  12:20:20
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

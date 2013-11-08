@@ -1,0 +1,79 @@
+TITLE:
+
+	Power
+	Correlation between latent variables
+	
+
+MONTECARLO:
+
+	NAMES ARE sad blues depress lonely crying tired failure
+			  worthy capable goodqual attitude;
+	NOBSERVATIONS = 250;
+	NREPS = 10000;
+		
+MODEL POPULATION:
+
+	DEP BY sad*.740
+		   blues*.587
+		   depress*.711
+		   lonely*.706
+		   crying*.451
+		   tired*.495
+		   failure*.374;
+	
+	SE BY worthy*.591
+		  capable*.537
+		  goodqual*.520
+		  attitude*.486;
+		  
+	DEP@1;
+	SE@1;
+	
+	DEP WITH SE*-.394;
+	
+	sad*0.246;
+	blues*0.281;
+	depress*0.222;
+	lonely*0.329;
+	crying*0.312;
+	tired*0.463;
+	failure*0.182;
+	worthy*0.400;
+	capable*0.506;
+	goodqual*0.340;
+	attitude*0.505;
+
+	
+MODEL:
+	
+	DEP BY sad*.740
+		   blues*.587
+		   depress*.711
+		   lonely*.706
+		   crying*.451
+		   tired*.495
+		   failure*.374;
+	
+	SE BY worthy*.591
+		  capable*.537
+		  goodqual*.520
+		  attitude*.486;
+		  
+	DEP@1;
+	SE@1;
+	
+	DEP WITH SE*-.394;
+	
+	sad*0.246;
+	blues*0.281;
+	depress*0.222;
+	lonely*0.329;
+	crying*0.312;
+	tired*0.463;
+	failure*0.182;
+	worthy*0.400;
+	capable*0.506;
+	goodqual*0.340;
+	attitude*0.505;
+
+

@@ -1,6 +1,6 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/15/2013   2:01 PM
+11/08/2013   2:36 PM
 
 INPUT INSTRUCTIONS
 
@@ -23,6 +23,9 @@ INPUT INSTRUCTIONS
   	DEPRESSION BY sad-failure;
   	SE BY worthy-attitude;
   	
+  Output:
+
+  	Standardized (STDYX);
 
 
 
@@ -170,14 +173,89 @@ MODEL RESULTS
     ATTITUDE           0.505      0.032     15.604      0.000
 
 
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ DEPRESSI BY
+    SAD                0.831      0.015     56.877      0.000
+    BLUES              0.742      0.019     38.411      0.000
+    DEPRESS            0.834      0.014     57.567      0.000
+    LONELY             0.776      0.017     44.527      0.000
+    CRYING             0.629      0.025     25.175      0.000
+    TIRED              0.588      0.027     22.058      0.000
+    FAILURE            0.659      0.023     28.132      0.000
+
+ SE       BY
+    WORTHY             0.682      0.030     22.644      0.000
+    CAPABLE            0.603      0.032     18.722      0.000
+    GOODQUAL           0.665      0.031     21.737      0.000
+    ATTITUDE           0.564      0.034     16.814      0.000
+
+ SE       WITH
+    DEPRESSION        -0.394      0.041     -9.629      0.000
+
+ Intercepts
+    SAD                1.931      0.063     30.425      0.000
+    BLUES              1.853      0.062     29.975      0.000
+    DEPRESS            1.821      0.061     29.785      0.000
+    LONELY             1.810      0.061     29.718      0.000
+    CRYING             1.849      0.062     29.952      0.000
+    TIRED              1.923      0.063     30.381      0.000
+    FAILURE            2.154      0.068     31.524      0.000
+    WORTHY             3.639      0.104     35.149      0.000
+    CAPABLE            2.678      0.080     33.346      0.000
+    GOODQUAL           3.816      0.108     35.359      0.000
+    ATTITUDE           3.276      0.095     34.621      0.000
+
+ Variances
+    DEPRESSION         1.000      0.000    999.000    999.000
+    SE                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    SAD                0.310      0.024     12.777      0.000
+    BLUES              0.449      0.029     15.676      0.000
+    DEPRESS            0.305      0.024     12.640      0.000
+    LONELY             0.398      0.027     14.694      0.000
+    CRYING             0.605      0.031     19.277      0.000
+    TIRED              0.654      0.031     20.847      0.000
+    FAILURE            0.565      0.031     18.303      0.000
+    WORTHY             0.534      0.041     12.989      0.000
+    CAPABLE            0.637      0.039     16.422      0.000
+    GOODQUAL           0.557      0.041     13.675      0.000
+    ATTITUDE           0.682      0.038     18.005      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    SAD                0.690      0.024     28.438      0.000
+    BLUES              0.551      0.029     19.205      0.000
+    DEPRESS            0.695      0.024     28.783      0.000
+    LONELY             0.602      0.027     22.263      0.000
+    CRYING             0.395      0.031     12.588      0.000
+    TIRED              0.346      0.031     11.029      0.000
+    FAILURE            0.435      0.031     14.066      0.000
+    WORTHY             0.466      0.041     11.322      0.000
+    CAPABLE            0.363      0.039      9.361      0.000
+    GOODQUAL           0.443      0.041     10.868      0.000
+    ATTITUDE           0.318      0.038      8.407      0.000
+
+
 QUALITY OF NUMERICAL RESULTS
 
      Condition Number for the Information Matrix              0.954E-02
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  14:01:44
-        Ending Time:  14:01:44
+     Beginning Time:  14:36:09
+        Ending Time:  14:36:09
        Elapsed Time:  00:00:00
 
 

@@ -1,0 +1,754 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+11/08/2013   3:00 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  	Power
+  	Correlation between latent variables
+  	
+
+  MONTECARLO:
+
+  	NAMES ARE sad blues depress lonely crying tired failure
+  			  worthy capable goodqual attitude;
+  	NOBSERVATIONS = 100;
+  	NREPS = 10000;
+  		
+  MODEL POPULATION:
+
+  	DEP BY sad*.740
+  		   blues*.587
+  		   depress*.711
+  		   lonely*.706
+  		   crying*.451
+  		   tired*.495
+  		   failure*.374;
+  	
+  	SE BY worthy*.591
+  		  capable*.537
+  		  goodqual*.520
+  		  attitude*.486;
+  		
+  	DEP@1;
+  	SE@1;
+  	
+  	DEP WITH SE*-.394;
+  	
+  	sad*0.246;
+  	blues*0.281;
+  	depress*0.222;
+  	lonely*0.329;
+  	crying*0.312;
+  	tired*0.463;
+  	failure*0.182;
+  	worthy*0.400;
+  	capable*0.506;
+  	goodqual*0.340;
+  	attitude*0.505;
+
+  	
+  MODEL:
+  	
+  	DEP BY sad*.740
+  		   blues*.587
+  		   depress*.711
+  		   lonely*.706
+  		   crying*.451
+  		   tired*.495
+  		   failure*.374;
+  	
+  	SE BY worthy*.591
+  		  capable*.537
+  		  goodqual*.520
+  		  attitude*.486;
+  		
+  	DEP@1;
+  	SE@1;
+  	
+  	DEP WITH SE*-.394;
+  	
+  	sad*0.246;
+  	blues*0.281;
+  	depress*0.222;
+  	lonely*0.329;
+  	crying*0.312;
+  	tired*0.463;
+  	failure*0.182;
+  	worthy*0.400;
+  	capable*0.506;
+  	goodqual*0.340;
+  	attitude*0.505;
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Power
+Correlation between latent variables
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of replications
+    Requested                                                10000
+    Completed                                                10000
+Value of seed                                                    0
+
+Number of dependent variables                                   11
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   SAD         BLUES       DEPRESS     LONELY      CRYING      TIRED
+   FAILURE     WORTHY      CAPABLE     GOODQUAL    ATTITUDE
+
+Continuous latent variables
+   DEP         SE
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+
+
+SAMPLE STATISTICS FOR THE FIRST REPLICATION
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+      1        -0.032         0.064         0.093         0.064        -0.087
+
+
+           Means
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+      1         0.016         0.077         0.011        -0.146        -0.096
+
+
+           Means
+              ATTITUDE
+              ________
+      1         0.008
+
+
+           Covariances
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+ SAD            0.629
+ BLUES          0.289         0.593
+ DEPRESS        0.405         0.328         0.646
+ LONELY         0.448         0.343         0.457         0.730
+ CRYING         0.282         0.297         0.291         0.297         0.492
+ TIRED          0.316         0.228         0.374         0.381         0.292
+ FAILURE        0.172         0.174         0.178         0.204         0.154
+ WORTHY        -0.174        -0.115        -0.110        -0.183        -0.125
+ CAPABLE       -0.154        -0.150        -0.118        -0.108        -0.169
+ GOODQUAL      -0.087        -0.159        -0.143        -0.194        -0.101
+ ATTITUDE      -0.138        -0.131        -0.106        -0.125        -0.150
+
+
+           Covariances
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+ TIRED          0.759
+ FAILURE        0.177         0.246
+ WORTHY        -0.130        -0.099         0.662
+ CAPABLE       -0.048        -0.039         0.364         0.833
+ GOODQUAL      -0.040        -0.057         0.336         0.431         0.777
+ ATTITUDE      -0.147        -0.137         0.269         0.283         0.230
+
+
+           Covariances
+              ATTITUDE
+              ________
+ ATTITUDE       0.832
+
+
+           Correlations
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+ SAD            1.000
+ BLUES          0.474         1.000
+ DEPRESS        0.635         0.530         1.000
+ LONELY         0.662         0.522         0.665         1.000
+ CRYING         0.507         0.550         0.517         0.496         1.000
+ TIRED          0.458         0.339         0.534         0.512         0.477
+ FAILURE        0.436         0.455         0.447         0.481         0.441
+ WORTHY        -0.270        -0.183        -0.169        -0.264        -0.219
+ CAPABLE       -0.213        -0.213        -0.161        -0.139        -0.264
+ GOODQUAL      -0.124        -0.234        -0.201        -0.257        -0.163
+ ATTITUDE      -0.191        -0.187        -0.144        -0.161        -0.234
+
+
+           Correlations
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+ TIRED          1.000
+ FAILURE        0.408         1.000
+ WORTHY        -0.184        -0.245         1.000
+ CAPABLE       -0.061        -0.087         0.491         1.000
+ GOODQUAL      -0.052        -0.131         0.469         0.535         1.000
+ ATTITUDE      -0.185        -0.303         0.362         0.340         0.286
+
+
+           Correlations
+              ATTITUDE
+              ________
+ ATTITUDE       1.000
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       34
+
+Loglikelihood
+
+    H0 Value
+
+        Mean                             -1105.698
+        Std Dev                             23.853
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.991        -1161.186      -1159.679
+           0.980       0.982        -1154.684      -1153.865
+           0.950       0.952        -1144.933      -1144.440
+           0.900       0.900        -1136.267      -1136.308
+           0.800       0.799        -1125.772      -1125.860
+           0.700       0.698        -1118.206      -1118.373
+           0.500       0.499        -1105.698      -1105.753
+           0.300       0.296        -1093.189      -1093.448
+           0.200       0.199        -1085.623      -1085.733
+           0.100       0.102        -1075.128      -1074.763
+           0.050       0.052        -1066.462      -1066.122
+           0.020       0.022        -1056.711      -1055.323
+           0.010       0.011        -1050.209      -1049.124
+
+    H1 Value
+
+        Mean                             -1082.811
+        Std Dev                             24.294
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.991        -1139.327      -1138.180
+           0.980       0.982        -1132.704      -1131.407
+           0.950       0.952        -1122.773      -1122.399
+           0.900       0.900        -1113.947      -1113.927
+           0.800       0.795        -1103.257      -1103.611
+           0.700       0.698        -1095.551      -1095.772
+           0.500       0.498        -1082.811      -1083.000
+           0.300       0.298        -1070.071      -1070.142
+           0.200       0.198        -1062.365      -1062.597
+           0.100       0.102        -1051.675      -1051.456
+           0.050       0.053        -1042.849      -1042.117
+           0.020       0.020        -1032.918      -1032.701
+           0.010       0.011        -1026.295      -1025.476
+
+Information Criteria
+
+    Akaike (AIC)
+
+        Mean                              2279.395
+        Std Dev                             47.705
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.989         2168.418       2166.216
+           0.980       0.978         2181.423       2178.591
+           0.950       0.948         2200.925       2200.203
+           0.900       0.898         2218.256       2217.498
+           0.800       0.801         2239.247       2239.342
+           0.700       0.704         2254.379       2254.896
+           0.500       0.500         2279.395       2279.442
+           0.300       0.302         2304.412       2304.737
+           0.200       0.201         2319.544       2319.700
+           0.100       0.100         2340.535       2340.469
+           0.050       0.048         2357.866       2356.838
+           0.020       0.018         2377.368       2375.614
+           0.010       0.009         2390.373       2387.208
+
+    Bayesian (BIC)
+
+        Mean                              2367.971
+        Std Dev                             47.705
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.989         2256.994       2254.792
+           0.980       0.978         2269.999       2267.167
+           0.950       0.948         2289.501       2288.779
+           0.900       0.898         2306.832       2306.074
+           0.800       0.801         2327.822       2327.917
+           0.700       0.704         2342.954       2343.472
+           0.500       0.500         2367.971       2368.017
+           0.300       0.302         2392.988       2393.313
+           0.200       0.201         2408.120       2408.276
+           0.100       0.100         2429.110       2429.045
+           0.050       0.048         2446.442       2445.414
+           0.020       0.018         2465.944       2464.190
+           0.010       0.009         2478.948       2475.784
+
+    Sample-Size Adjusted BIC (n* = (n + 2) / 24)
+
+        Mean                              2260.591
+        Std Dev                             47.705
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.989         2149.614       2147.411
+           0.980       0.978         2162.618       2159.786
+           0.950       0.948         2182.120       2181.398
+           0.900       0.898         2199.451       2198.694
+           0.800       0.801         2220.442       2220.537
+           0.700       0.704         2235.574       2236.091
+           0.500       0.500         2260.591       2260.637
+           0.300       0.302         2285.607       2285.933
+           0.200       0.201         2300.740       2300.895
+           0.100       0.100         2321.730       2321.665
+           0.050       0.048         2339.061       2338.033
+           0.020       0.018         2358.563       2356.810
+           0.010       0.009         2371.568       2368.403
+
+Chi-Square Test of Model Fit
+
+        Degrees of freedom                      43
+
+        Mean                                45.773
+        Std Dev                              9.869
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.995           24.398         25.831
+           0.980       0.989           26.159         27.618
+           0.950       0.970           28.965         30.686
+           0.900       0.936           31.625         33.594
+           0.800       0.866           35.065         37.191
+           0.700       0.783           37.698         40.098
+           0.500       0.609           42.335         45.143
+           0.300       0.416           47.339         50.618
+           0.200       0.302           50.548         54.045
+           0.100       0.170           55.230         58.728
+           0.050       0.092           59.304         62.777
+           0.020       0.039           64.116         67.704
+           0.010       0.021           67.459         71.398
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+        Mean                                 0.025
+        Std Dev                              0.025
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       1.000           -0.034          0.000
+           0.980       1.000           -0.027          0.000
+           0.950       1.000           -0.017          0.000
+           0.900       1.000           -0.007          0.000
+           0.800       0.580            0.004          0.000
+           0.700       0.560            0.012          0.000
+           0.500       0.479            0.025          0.022
+           0.300       0.345            0.038          0.042
+           0.200       0.252            0.046          0.051
+           0.100       0.130            0.057          0.060
+           0.050       0.057            0.067          0.068
+           0.020       0.018            0.077          0.076
+           0.010       0.007            0.084          0.081
+
+SRMR (Standardized Root Mean Square Residual)
+
+        Mean                                 0.052
+        Std Dev                              0.008
+        Number of successful computations    10000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.997            0.033          0.035
+           0.980       0.992            0.035          0.037
+           0.950       0.965            0.038          0.039
+           0.900       0.911            0.041          0.042
+           0.800       0.797            0.045          0.045
+           0.700       0.680            0.047          0.047
+           0.500       0.473            0.052          0.051
+           0.300       0.278            0.056          0.055
+           0.200       0.191            0.058          0.058
+           0.100       0.106            0.062          0.062
+           0.050       0.060            0.065          0.066
+           0.020       0.029            0.068          0.070
+           0.010       0.018            0.070          0.073
+
+
+MODEL RESULTS
+
+                           ESTIMATES              S. E.     M. S. E.  95%  % Sig
+              Population   Average   Std. Dev.   Average             Cover Coeff
+ DEP      BY
+  SAD              0.740     0.7349     0.0746     0.0744     0.0056 0.946 1.000
+  BLUES            0.587     0.5836     0.0700     0.0695     0.0049 0.945 1.000
+  DEPRESS          0.711     0.7062     0.0709     0.0711     0.0051 0.946 1.000
+  LONELY           0.706     0.7010     0.0789     0.0785     0.0063 0.945 1.000
+  CRYING           0.451     0.4473     0.0665     0.0666     0.0044 0.946 1.000
+  TIRED            0.495     0.4924     0.0805     0.0793     0.0065 0.942 1.000
+  FAILURE          0.374     0.3717     0.0520     0.0519     0.0027 0.948 1.000
+
+ SE       BY
+  WORTHY           0.591     0.5886     0.0923     0.0914     0.0085 0.947 1.000
+  CAPABLE          0.537     0.5337     0.0976     0.0949     0.0095 0.942 1.000
+  GOODQUAL         0.520     0.5179     0.0836     0.0826     0.0070 0.945 1.000
+  ATTITUDE         0.486     0.4831     0.0938     0.0923     0.0088 0.946 0.999
+
+ DEP      WITH
+  SE              -0.394    -0.3913     0.1109     0.1077     0.0123 0.936 0.915
+
+ Intercepts
+  SAD              0.000     0.0009     0.0894     0.0884     0.0080 0.944 0.056
+  BLUES            0.000     0.0017     0.0798     0.0786     0.0064 0.942 0.058
+  DEPRESS          0.000     0.0012     0.0867     0.0847     0.0075 0.944 0.056
+  LONELY           0.000     0.0003     0.0916     0.0904     0.0084 0.945 0.055
+  CRYING           0.000     0.0005     0.0732     0.0712     0.0054 0.939 0.060
+  TIRED            0.000     0.0011     0.0844     0.0835     0.0071 0.944 0.056
+  FAILURE          0.000     0.0004     0.0570     0.0563     0.0032 0.945 0.055
+  WORTHY           0.000    -0.0004     0.0859     0.0860     0.0074 0.950 0.050
+  CAPABLE          0.000     0.0018     0.0889     0.0885     0.0079 0.946 0.054
+  GOODQUAL         0.000     0.0000     0.0773     0.0777     0.0060 0.949 0.051
+  ATTITUDE         0.000     0.0003     0.0864     0.0855     0.0075 0.947 0.053
+
+ Variances
+  DEP              1.000     1.0000     0.0000     0.0000     0.0000 1.000 0.000
+  SE               1.000     1.0000     0.0000     0.0000     0.0000 1.000 0.000
+
+ Residual Variances
+  SAD              0.246     0.2406     0.0465     0.0452     0.0022 0.929 1.000
+  BLUES            0.281     0.2750     0.0458     0.0450     0.0021 0.926 1.000
+  DEPRESS          0.222     0.2170     0.0417     0.0411     0.0018 0.927 1.000
+  LONELY           0.329     0.3231     0.0559     0.0549     0.0032 0.928 1.000
+  CRYING           0.312     0.3053     0.0472     0.0465     0.0023 0.925 1.000
+  TIRED            0.463     0.4525     0.0682     0.0680     0.0048 0.925 1.000
+  FAILURE          0.182     0.1779     0.0279     0.0275     0.0008 0.923 1.000
+  WORTHY           0.400     0.3891     0.0851     0.0831     0.0074 0.940 0.993
+  CAPABLE          0.506     0.4924     0.0910     0.0893     0.0085 0.932 0.999
+  GOODQUAL         0.340     0.3309     0.0700     0.0677     0.0050 0.933 0.995
+  ATTITUDE         0.505     0.4923     0.0863     0.0848     0.0076 0.929 1.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Average Condition Number for the Information Matrix      0.226E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+TECHNICAL OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+      1           1             2             3             4             5
+
+
+           NU
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+      1           6             7             8             9            10
+
+
+           NU
+              ATTITUDE
+              ________
+      1          11
+
+
+           LAMBDA
+              DEP           SE
+              ________      ________
+ SAD               12             0
+ BLUES             13             0
+ DEPRESS           14             0
+ LONELY            15             0
+ CRYING            16             0
+ TIRED             17             0
+ FAILURE           18             0
+ WORTHY             0            19
+ CAPABLE            0            20
+ GOODQUAL           0            21
+ ATTITUDE           0            22
+
+
+           THETA
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+ SAD               23
+ BLUES              0            24
+ DEPRESS            0             0            25
+ LONELY             0             0             0            26
+ CRYING             0             0             0             0            27
+ TIRED              0             0             0             0             0
+ FAILURE            0             0             0             0             0
+ WORTHY             0             0             0             0             0
+ CAPABLE            0             0             0             0             0
+ GOODQUAL           0             0             0             0             0
+ ATTITUDE           0             0             0             0             0
+
+
+           THETA
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+ TIRED             28
+ FAILURE            0            29
+ WORTHY             0             0            30
+ CAPABLE            0             0             0            31
+ GOODQUAL           0             0             0             0            32
+ ATTITUDE           0             0             0             0             0
+
+
+           THETA
+              ATTITUDE
+              ________
+ ATTITUDE          33
+
+
+           ALPHA
+              DEP           SE
+              ________      ________
+      1           0             0
+
+
+           BETA
+              DEP           SE
+              ________      ________
+ DEP                0             0
+ SE                 0             0
+
+
+           PSI
+              DEP           SE
+              ________      ________
+ DEP                0
+ SE                34             0
+
+
+     STARTING VALUES
+
+
+           NU
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              ATTITUDE
+              ________
+      1         0.000
+
+
+           LAMBDA
+              DEP           SE
+              ________      ________
+ SAD            0.740         0.000
+ BLUES          0.587         0.000
+ DEPRESS        0.711         0.000
+ LONELY         0.706         0.000
+ CRYING         0.451         0.000
+ TIRED          0.495         0.000
+ FAILURE        0.374         0.000
+ WORTHY         0.000         0.591
+ CAPABLE        0.000         0.537
+ GOODQUAL       0.000         0.520
+ ATTITUDE       0.000         0.486
+
+
+           THETA
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+ SAD            0.246
+ BLUES          0.000         0.281
+ DEPRESS        0.000         0.000         0.222
+ LONELY         0.000         0.000         0.000         0.329
+ CRYING         0.000         0.000         0.000         0.000         0.312
+ TIRED          0.000         0.000         0.000         0.000         0.000
+ FAILURE        0.000         0.000         0.000         0.000         0.000
+ WORTHY         0.000         0.000         0.000         0.000         0.000
+ CAPABLE        0.000         0.000         0.000         0.000         0.000
+ GOODQUAL       0.000         0.000         0.000         0.000         0.000
+ ATTITUDE       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+ TIRED          0.463
+ FAILURE        0.000         0.182
+ WORTHY         0.000         0.000         0.400
+ CAPABLE        0.000         0.000         0.000         0.506
+ GOODQUAL       0.000         0.000         0.000         0.000         0.340
+ ATTITUDE       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              ATTITUDE
+              ________
+ ATTITUDE       0.505
+
+
+           ALPHA
+              DEP           SE
+              ________      ________
+      1         0.000         0.000
+
+
+           BETA
+              DEP           SE
+              ________      ________
+ DEP            0.000         0.000
+ SE             0.000         0.000
+
+
+           PSI
+              DEP           SE
+              ________      ________
+ DEP            1.000
+ SE            -0.394         1.000
+
+
+     POPULATION VALUES
+
+
+           NU
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              ATTITUDE
+              ________
+ 1              0.000
+
+
+           LAMBDA
+              DEP           SE
+              ________      ________
+ SAD            0.740         0.000
+ BLUES          0.587         0.000
+ DEPRESS        0.711         0.000
+ LONELY         0.706         0.000
+ CRYING         0.451         0.000
+ TIRED          0.495         0.000
+ FAILURE        0.374         0.000
+ WORTHY         0.000         0.591
+ CAPABLE        0.000         0.537
+ GOODQUAL       0.000         0.520
+ ATTITUDE       0.000         0.486
+
+
+           THETA
+              SAD           BLUES         DEPRESS       LONELY        CRYING
+              ________      ________      ________      ________      ________
+ SAD            0.246
+ BLUES          0.000         0.281
+ DEPRESS        0.000         0.000         0.222
+ LONELY         0.000         0.000         0.000         0.329
+ CRYING         0.000         0.000         0.000         0.000         0.312
+ TIRED          0.000         0.000         0.000         0.000         0.000
+ FAILURE        0.000         0.000         0.000         0.000         0.000
+ WORTHY         0.000         0.000         0.000         0.000         0.000
+ CAPABLE        0.000         0.000         0.000         0.000         0.000
+ GOODQUAL       0.000         0.000         0.000         0.000         0.000
+ ATTITUDE       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              TIRED         FAILURE       WORTHY        CAPABLE       GOODQUAL
+              ________      ________      ________      ________      ________
+ TIRED          0.463
+ FAILURE        0.000         0.182
+ WORTHY         0.000         0.000         0.400
+ CAPABLE        0.000         0.000         0.000         0.506
+ GOODQUAL       0.000         0.000         0.000         0.000         0.340
+ ATTITUDE       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              ATTITUDE
+              ________
+ ATTITUDE       0.505
+
+
+           ALPHA
+              DEP           SE
+              ________      ________
+ 1              0.000         0.000
+
+
+           BETA
+              DEP           SE
+              ________      ________
+ DEP            0.000         0.000
+ SE             0.000         0.000
+
+
+           PSI
+              DEP           SE
+              ________      ________
+ DEP            1.000
+ SE            -0.394         1.000
+
+
+     Beginning Time:  15:00:10
+        Ending Time:  15:00:44
+       Elapsed Time:  00:00:34
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

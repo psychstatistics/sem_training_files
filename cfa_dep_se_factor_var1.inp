@@ -14,9 +14,11 @@ Variable:
 			  
 Model:
 
-	DEPRESSION BY sad-failure;
-	SE BY worthy-attitude;
-	
-Output:
-
-	Standardized (STDYX);
+	DEPRESSION BY sad*
+				  blues-failure;
+	SE BY worthy*
+		 capable-attitude;
+		 
+	DEPRESSION@1;
+	SE@1;
+		 

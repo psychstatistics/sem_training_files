@@ -1,0 +1,44 @@
+TITLE:
+
+	Power Analysis for Indirect Effect
+	Missing Data
+	Indirect Effect is Half of Total Effect
+	N = 50
+
+MONTECARLO:
+
+	NAMES ARE x m y;
+	NOBSERVATIONS = 50;
+	NREPS = 10000;
+	PATMISS = m (0) y (0) | m (1) y (1);
+	PATPROB = .8 | .2;
+		
+MODEL POPULATION:
+
+	x*1;
+	[x*0];
+	m*1;
+	[m*0];
+	y*1;
+	[y*0];
+	
+	y ON m*.22 x*.45;
+	m ON x*.22;
+	
+MODEL:
+	
+	x*1;
+	[x*0];
+	m*1;
+	[m*0];
+	y*1;
+	[y*0];
+
+	y ON m*.22 x*.45;
+	m ON x*.22;
+
+MODEL INDIRECT:
+	
+	Y IND X;
+
+

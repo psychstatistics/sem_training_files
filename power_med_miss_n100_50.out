@@ -1,0 +1,567 @@
+Mplus VERSION 7.11 (Mac)
+MUTHEN & MUTHEN
+11/08/2013  11:36 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  	Power Analysis for Indirect Effect
+  	Missing Data
+  	Indirect Effect is Half of Total Effect
+  	N = 100
+
+  MONTECARLO:
+
+  	NAMES ARE x m y;
+  	NOBSERVATIONS = 10000;
+  	NREPS = 1;
+  	PATMISS = m (0) y (0) | m (1) y (1);
+  	PATPROB = .8 | .2;
+  	
+  MODEL POPULATION:
+
+  	x*1;
+  	[x*0];
+  	m*1;
+  	[m*0];
+  	y*1;
+  	[y*0];
+  	
+  	y ON m*.5 x*.25;
+  	m ON x*.5;
+  	
+  MODEL:
+
+  	x*1;
+  	[x*0];
+  	m*1;
+  	[m*0];
+  	y*1;
+  	[y*0];
+  	
+  	y ON m*.5 x*.25;
+  	m ON x*.5;
+  	
+  MODEL INDIRECT:
+  	
+  	Y IND X;
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+
+Power Analysis for Indirect Effect
+Missing Data
+Indirect Effect is Half of Total Effect
+N = 100
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       10000
+
+Number of replications
+    Requested                                                    1
+    Completed                                                    1
+Value of seed                                                    0
+
+Number of dependent variables                                    2
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   M           Y
+
+Observed independent variables
+   X
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+
+SUMMARY OF DATA FOR THE FIRST REPLICATION
+
+     Number of missing data patterns             2
+
+
+SUMMARY OF MISSING DATA PATTERNS FOR THE FIRST REPLICATION
+
+
+     MISSING DATA PATTERNS (x = not missing)
+
+           1  2
+ M         x
+ Y         x
+ X         x  x
+
+
+     MISSING DATA PATTERN FREQUENCIES
+
+    Pattern   Frequency     Pattern   Frequency
+          1        7935           2        2065
+
+
+COVARIANCE COVERAGE OF DATA FOR THE FIRST REPLICATION
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              M             Y             X
+              ________      ________      ________
+ M              0.793
+ Y              0.793         0.793
+ X              0.793         0.793         1.000
+
+
+
+SAMPLE STATISTICS FOR THE FIRST REPLICATION
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              M             Y             X
+              ________      ________      ________
+      1        -0.002         0.009        -0.009
+
+
+           Covariances
+              M             Y             X
+              ________      ________      ________
+ M              1.273
+ Y              0.767         1.504
+ X              0.508         0.511         1.012
+
+
+           Correlations
+              M             Y             X
+              ________      ________      ________
+ M              1.000
+ Y              0.554         1.000
+ X              0.448         0.414         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -36796.646
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        9
+
+Loglikelihood
+
+    H0 Value
+
+        Mean                            -36796.646
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000       -36796.646     -36796.646
+           0.980       0.000       -36796.646     -36796.646
+           0.950       0.000       -36796.646     -36796.646
+           0.900       0.000       -36796.646     -36796.646
+           0.800       0.000       -36796.646     -36796.646
+           0.700       0.000       -36796.646     -36796.646
+           0.500       0.000       -36796.646     -36796.646
+           0.300       0.000       -36796.646     -36796.646
+           0.200       0.000       -36796.646     -36796.646
+           0.100       0.000       -36796.646     -36796.646
+           0.050       0.000       -36796.646     -36796.646
+           0.020       0.000       -36796.646     -36796.646
+           0.010       0.000       -36796.646     -36796.646
+
+    H1 Value
+
+        Mean                            -36796.646
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000       -36796.646     -36796.646
+           0.980       0.000       -36796.646     -36796.646
+           0.950       0.000       -36796.646     -36796.646
+           0.900       0.000       -36796.646     -36796.646
+           0.800       0.000       -36796.646     -36796.646
+           0.700       0.000       -36796.646     -36796.646
+           0.500       0.000       -36796.646     -36796.646
+           0.300       0.000       -36796.646     -36796.646
+           0.200       0.000       -36796.646     -36796.646
+           0.100       0.000       -36796.646     -36796.646
+           0.050       0.000       -36796.646     -36796.646
+           0.020       0.000       -36796.646     -36796.646
+           0.010       0.000       -36796.646     -36796.646
+
+Information Criteria
+
+    Akaike (AIC)
+
+        Mean                             73611.292
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000        73611.292      73611.292
+           0.980       0.000        73611.292      73611.292
+           0.950       0.000        73611.292      73611.292
+           0.900       0.000        73611.292      73611.292
+           0.800       0.000        73611.292      73611.292
+           0.700       0.000        73611.292      73611.292
+           0.500       0.000        73611.292      73611.292
+           0.300       0.000        73611.292      73611.292
+           0.200       0.000        73611.292      73611.292
+           0.100       0.000        73611.292      73611.292
+           0.050       0.000        73611.292      73611.292
+           0.020       0.000        73611.292      73611.292
+           0.010       0.000        73611.292      73611.292
+
+    Bayesian (BIC)
+
+        Mean                             73676.185
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000        73676.185      73676.185
+           0.980       0.000        73676.185      73676.185
+           0.950       0.000        73676.185      73676.185
+           0.900       0.000        73676.185      73676.185
+           0.800       0.000        73676.185      73676.185
+           0.700       0.000        73676.185      73676.185
+           0.500       0.000        73676.185      73676.185
+           0.300       0.000        73676.185      73676.185
+           0.200       0.000        73676.185      73676.185
+           0.100       0.000        73676.185      73676.185
+           0.050       0.000        73676.185      73676.185
+           0.020       0.000        73676.185      73676.185
+           0.010       0.000        73676.185      73676.185
+
+    Sample-Size Adjusted BIC (n* = (n + 2) / 24)
+
+        Mean                             73647.584
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000        73647.584      73647.584
+           0.980       0.000        73647.584      73647.584
+           0.950       0.000        73647.584      73647.584
+           0.900       0.000        73647.584      73647.584
+           0.800       0.000        73647.584      73647.584
+           0.700       0.000        73647.584      73647.584
+           0.500       0.000        73647.584      73647.584
+           0.300       0.000        73647.584      73647.584
+           0.200       0.000        73647.584      73647.584
+           0.100       0.000        73647.584      73647.584
+           0.050       0.000        73647.584      73647.584
+           0.020       0.000        73647.584      73647.584
+           0.010       0.000        73647.584      73647.584
+
+Chi-Square Test of Model Fit
+
+        Degrees of freedom                       0
+
+        Mean                                 0.000
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       1.000            0.000          0.000
+           0.980       1.000            0.000          0.000
+           0.950       1.000            0.000          0.000
+           0.900       1.000            0.000          0.000
+           0.800       1.000            0.000          0.000
+           0.700       1.000            0.000          0.000
+           0.500       1.000            0.000          0.000
+           0.300       1.000            0.000          0.000
+           0.200       1.000            0.000          0.000
+           0.100       1.000            0.000          0.000
+           0.050       1.000            0.000          0.000
+           0.020       1.000            0.000          0.000
+           0.010       1.000            0.000          0.000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+        Mean                                 0.000
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000            0.000          0.000
+           0.980       0.000            0.000          0.000
+           0.950       0.000            0.000          0.000
+           0.900       0.000            0.000          0.000
+           0.800       0.000            0.000          0.000
+           0.700       0.000            0.000          0.000
+           0.500       0.000            0.000          0.000
+           0.300       0.000            0.000          0.000
+           0.200       0.000            0.000          0.000
+           0.100       0.000            0.000          0.000
+           0.050       0.000            0.000          0.000
+           0.020       0.000            0.000          0.000
+           0.010       0.000            0.000          0.000
+
+SRMR (Standardized Root Mean Square Residual)
+
+        Mean                                 0.000
+        Std Dev                              0.000
+        Number of successful computations        1
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000            0.000          0.000
+           0.980       0.000            0.000          0.000
+           0.950       0.000            0.000          0.000
+           0.900       0.000            0.000          0.000
+           0.800       0.000            0.000          0.000
+           0.700       0.000            0.000          0.000
+           0.500       0.000            0.000          0.000
+           0.300       0.000            0.000          0.000
+           0.200       0.000            0.000          0.000
+           0.100       0.000            0.000          0.000
+           0.050       0.000            0.000          0.000
+           0.020       0.000            0.000          0.000
+           0.010       0.000            0.000          0.000
+
+
+MODEL RESULTS
+
+                           ESTIMATES              S. E.     M. S. E.  95%  % Sig
+              Population   Average   Std. Dev.   Average             Cover Coeff
+ Y        ON
+  M                0.500     0.5013     0.0000     0.0111     0.0000 1.000 1.000
+  X                0.250     0.2534     0.0000     0.0124     0.0000 1.000 1.000
+
+ M        ON
+  X                0.500     0.5019     0.0000     0.0112     0.0000 1.000 1.000
+
+ Means
+  X                0.000    -0.0094     0.0000     0.0101     0.0001 1.000 0.000
+
+ Intercepts
+  M                0.000     0.0025     0.0000     0.0113     0.0000 1.000 0.000
+  Y                0.000     0.0122     0.0000     0.0112     0.0001 1.000 0.000
+
+ Variances
+  X                1.000     1.0117     0.0000     0.0143     0.0001 1.000 1.000
+
+ Residual Variances
+  M                1.000     1.0177     0.0000     0.0162     0.0003 1.000 1.000
+  Y                1.000     0.9901     0.0000     0.0157     0.0001 1.000 1.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Average Condition Number for the Information Matrix      0.286E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                           ESTIMATES              S. E.     M. S. E.  95%  % Sig
+              Population   Average   Std. Dev.   Average             Cover Coeff
+
+Effects from X to Y
+
+  Total            0.500     0.5051     0.0000     0.0124     0.0000 1.000 1.000
+  Tot indirect     0.250     0.2516     0.0000     0.0079     0.0000 1.000 1.000
+
+ Specific indirect
+
+  Y
+  M
+  X                0.250     0.2516     0.0000     0.0079     0.0000 1.000 1.000
+
+ Direct
+  Y
+  X                0.250     0.2534     0.0000     0.0124     0.0000 1.000 1.000
+
+
+
+TECHNICAL OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              M             Y             X
+              ________      ________      ________
+      1           0             0             0
+
+
+           LAMBDA
+              M             Y             X
+              ________      ________      ________
+ M                  0             0             0
+ Y                  0             0             0
+ X                  0             0             0
+
+
+           THETA
+              M             Y             X
+              ________      ________      ________
+ M                  0
+ Y                  0             0
+ X                  0             0             0
+
+
+           ALPHA
+              M             Y             X
+              ________      ________      ________
+      1           1             2             3
+
+
+           BETA
+              M             Y             X
+              ________      ________      ________
+ M                  0             0             4
+ Y                  5             0             6
+ X                  0             0             0
+
+
+           PSI
+              M             Y             X
+              ________      ________      ________
+ M                  7
+ Y                  0             8
+ X                  0             0             9
+
+
+     STARTING VALUES
+
+
+           NU
+              M             Y             X
+              ________      ________      ________
+      1         0.000         0.000         0.000
+
+
+           LAMBDA
+              M             Y             X
+              ________      ________      ________
+ M              1.000         0.000         0.000
+ Y              0.000         1.000         0.000
+ X              0.000         0.000         1.000
+
+
+           THETA
+              M             Y             X
+              ________      ________      ________
+ M              0.000
+ Y              0.000         0.000
+ X              0.000         0.000         0.000
+
+
+           ALPHA
+              M             Y             X
+              ________      ________      ________
+      1         0.000         0.000         0.000
+
+
+           BETA
+              M             Y             X
+              ________      ________      ________
+ M              0.000         0.000         0.500
+ Y              0.500         0.000         0.250
+ X              0.000         0.000         0.000
+
+
+           PSI
+              M             Y             X
+              ________      ________      ________
+ M              1.000
+ Y              0.000         1.000
+ X              0.000         0.000         1.000
+
+
+     POPULATION VALUES
+
+
+           NU
+              M             Y             X
+              ________      ________      ________
+ 1              0.000         0.000         0.000
+
+
+           LAMBDA
+              M             Y             X
+              ________      ________      ________
+ M              1.000         0.000         0.000
+ Y              0.000         1.000         0.000
+ X              0.000         0.000         1.000
+
+
+           THETA
+              M             Y             X
+              ________      ________      ________
+ M              0.000
+ Y              0.000         0.000
+ X              0.000         0.000         0.000
+
+
+           ALPHA
+              M             Y             X
+              ________      ________      ________
+ 1              0.000         0.000         0.000
+
+
+           BETA
+              M             Y             X
+              ________      ________      ________
+ M              0.000         0.000         0.500
+ Y              0.500         0.000         0.250
+ X              0.000         0.000         0.000
+
+
+           PSI
+              M             Y             X
+              ________      ________      ________
+ M              1.000
+ Y              0.000         1.000
+ X              0.000         0.000         1.000
+
+
+     Beginning Time:  11:36:52
+        Ending Time:  11:36:52
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

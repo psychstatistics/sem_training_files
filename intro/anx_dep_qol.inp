@@ -1,21 +1,20 @@
-Title:
+TITLE:
 	
 	Correlation between anxiety, depression, and QoL
 
-Data:
+DATA:
 
-	File is anx_dep_qol.csv;
+	FILE IS anx_dep_qol.csv;
 
-Variable:
+VARIABLE:
 	
-	Names are
-		anx dep qol;
+	NAMES ARE anx dep qol;
 		
-Model:
+MODEL:
 
 	anx WITH dep qol;
 	dep WITH qol;
 
 	
-Output:
+OUTPUT:
 	STDYX;

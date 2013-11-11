@@ -1,29 +1,29 @@
-Title:
+TITLE:
 	
 	ANOVA example;
 	Unconstrained Means;
 	Variances Constrained (Homoscedastic);
 
-Data:
+DATA:
 
-	File is anova_example_data.csv;
+	FILE IS anova_example_data.csv;
 
-Variable:
+VARIABLE:
 	
-	Names are dep tx;
-	Grouping is tx (1 = CBT, 2 = IPT, 3 = Control);	
+	NAMES ARE dep tx;
+	GROUPING IS tx (1 = CBT, 2 = IPT, 3 = Control);	
 		
-Model:
+MODEL:
 	
 	[dep] (mu1);
 	dep	(sig);
 
-Model IPT:
+MODEL IPT:
 	
 	[dep] (mu2);
 	dep	(sig);
 	
-Model Control:
+MODEL Control:
 	
 	[dep] (mu3);
 	dep	(sig);	

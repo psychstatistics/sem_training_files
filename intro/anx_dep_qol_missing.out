@@ -1,31 +1,31 @@
-Mplus VERSION 7.1 (Mac)
+Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-06/07/2013   1:53 PM
+11/11/2013   3:43 PM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	Correlation between anxiety, depression, and QoL
   	with missing data
 
-  Data:
+  DATA:
 
-  	File is anx_dep_qol_missing.csv;
+  	FILE IS anx_dep_qol_missing.csv;
 
-  Variable:
+  VARIABLE:
   	
-  	Names are
+  	NAMES ARE
   		anx dep qol;
-  	Missing are all (-999);
+  	MISSING ARE ALL (-999);
   		
-  Model:
+  MODEL:
 
   	anx WITH dep qol;
   	dep WITH qol;
 
   	
-  Output:
+  OUTPUT:
   	STDYX;
 
 
@@ -197,8 +197,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  13:53:07
-        Ending Time:  13:53:07
+     Beginning Time:  15:43:46
+        Ending Time:  15:43:46
        Elapsed Time:  00:00:00
 
 

@@ -1,33 +1,33 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/31/2013   1:10 PM
+11/11/2013   3:43 PM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	ANOVA example
 
-  Data:
+  DATA:
 
-  	File is anova_example_data.csv;
+  	FILE IS anova_example_data.csv;
 
-  Variable:
+  VARIABLE:
   	
-  	Names are dep tx;
-  	Grouping is tx (1 = CBT, 2 = IPT, 3 = Control);	
+  	NAMES ARE dep tx;
+  	GROUPING IS tx (1 = CBT, 2 = IPT, 3 = Control);	
   		
-  Model:
+  MODEL:
   	
   	[dep] (mu);
   	dep	(sig);
 
-  Model IPT:
+  MODEL IPT:
   	
   	[dep] (mu);
   	dep	(sig);
   	
-  Model Control:
+  MODEL Control:
   	
   	[dep] (mu);
   	dep	(sig);	
@@ -172,8 +172,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  13:10:05
-        Ending Time:  13:10:05
+     Beginning Time:  15:43:15
+        Ending Time:  15:43:15
        Elapsed Time:  00:00:00
 
 

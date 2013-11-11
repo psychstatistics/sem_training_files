@@ -1,31 +1,30 @@
-Mplus VERSION 7.1 (Mac)
+Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-06/12/2013   2:26 PM
+11/11/2013   3:44 PM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	Depression predicted by anxiety and QoL
   	Slopes constrained to be equal
 
-  Data:
+  DATA:
 
-  	File is anx_dep_qol.csv;
+  	FILE IS anx_dep_qol.csv;
 
-  Variable:
+  VARIABLE:
   	
-  	Names are
-  		anx dep qol;
+  	NAMES ARE anx dep qol;
   		
-  Model:
+  MODEL:
 
-  	dep ON anx (a)
-  		   qol (a);
+  	dep ON anx (b3)
+  		   qol (b3);
   	anx WITH qol;
 
   	
-  Output:
+  OUTPUT:
   	STDYX;
 
 
@@ -190,8 +189,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  14:26:17
-        Ending Time:  14:26:17
+     Beginning Time:  15:44:01
+        Ending Time:  15:44:01
        Elapsed Time:  00:00:00
 
 

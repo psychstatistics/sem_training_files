@@ -1,26 +1,26 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/30/2013   2:01 PM
+11/13/2013  11:20 AM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	CFA;
   	Self-esteem and depression;
   	Independence Model;
   	
 
-  Data:
+  DATA:
 
-  	File is se_dep_items.csv;
+  	FILE IS se_dep_items.csv;
 
-  Variable:
+  VARIABLE:
   	
   	Names are sad blues depress lonely crying tired failure
   			  worthy capable goodqual attitude;
   			
-  Model:
+  MODEL:
   	
   	sad;
   	blues;
@@ -165,8 +165,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  14:01:15
-        Ending Time:  14:01:15
+     Beginning Time:  11:20:44
+        Ending Time:  11:20:44
        Elapsed Time:  00:00:00
 
 

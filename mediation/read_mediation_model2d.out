@@ -1,13 +1,13 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-11/06/2013   3:24 PM
+11/13/2013   1:34 PM
 
 INPUT INSTRUCTIONS
 
   TITLE:
   	
   	Mediation Model
-  	Model 2c
+  	Model 2d
   	Correlated Residuals of Mediators
 
   DATA:
@@ -63,7 +63,7 @@ INPUT INSTRUCTIONS
 
 
 Mediation Model
-Model 2c
+Model 2d
 Correlated Residuals of Mediators
 
 SUMMARY OF ANALYSIS
@@ -381,9 +381,9 @@ Effects from ATT4 to READ21
 
 
 
-     Beginning Time:  15:24:38
-        Ending Time:  15:24:39
-       Elapsed Time:  00:00:01
+     Beginning Time:  13:34:05
+        Ending Time:  13:34:07
+       Elapsed Time:  00:00:02
 
 
 

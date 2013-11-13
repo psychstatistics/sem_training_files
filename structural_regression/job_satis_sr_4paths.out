@@ -12,13 +12,13 @@ INPUT INSTRUCTIONS
 
   DATA:
 
-  	File is job_satis_data.txt;
-  	Type is correlation stdeviations;
-  	Nobservations = 263;
+  	FILE IS job_satis_data.txt;
+  	TYPE IS correlation stdeviations;
+  	NOBSERVATIONS = 263;
 
   VARIABLE:
   	
-  	Names are work1 work2 work3 happy mood1 mood2
+  	NAMES ARE work1 work2 work3 happy mood1 mood2
     			  perform1 perform2 approval beliefs
   			  selftalk imagery;
 

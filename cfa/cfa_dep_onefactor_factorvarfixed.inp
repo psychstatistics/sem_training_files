@@ -1,17 +1,17 @@
-Title:
+TITLE:
 	
 	CFA One Factor - Depression itmes
 	Identifying the model by fixing the factor variance to 1
 
-Data:
+DATA:
 
-	File is dep_items.csv;
+	FILE IS dep_items.csv;
 
-Variable:
+VARIABLE:
 	
 	Names are sad blues depress lonely crying tired failure;
 
-Model:
+MODEL:
 
 	DEPRESSION BY sad*
 				  blues-failure;

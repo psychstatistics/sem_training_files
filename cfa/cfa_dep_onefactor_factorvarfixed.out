@@ -1,23 +1,23 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/08/2013   4:57 PM
+11/13/2013  11:15 AM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	CFA One Factor - Depression itmes
   	Identifying the model by fixing the factor variance to 1
 
-  Data:
+  DATA:
 
-  	File is dep_items.csv;
+  	FILE IS dep_items.csv;
 
-  Variable:
+  VARIABLE:
   	
   	Names are sad blues depress lonely crying tired failure;
 
-  Model:
+  MODEL:
 
   	DEPRESSION BY sad*
   				  blues-failure;
@@ -157,8 +157,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  16:57:08
-        Ending Time:  16:57:08
+     Beginning Time:  11:15:24
+        Ending Time:  11:15:24
        Elapsed Time:  00:00:00
 
 

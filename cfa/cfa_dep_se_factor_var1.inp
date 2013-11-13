@@ -1,18 +1,18 @@
-Title:
+TITLE:
 	
 	CFA Two Factors;
 	Self-esteem and depression;
 
-Data:
+DATA:
 
-	File is se_dep_items.csv;
+	FILE IS se_dep_items.csv;
 
-Variable:
+VARIABLE:
 	
 	Names are sad blues depress lonely crying tired failure
 			  worthy capable goodqual attitude;
 			  
-Model:
+MODEL:
 
 	DEPRESSION BY sad*
 				  blues-failure;

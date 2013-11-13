@@ -1,27 +1,27 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/24/2013  10:16 PM
+11/13/2013   1:20 PM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	Structural Regression
   	1 common factor
 
-  Data:
+  DATA:
 
-  	File is job_satis_data.txt;
-  	Type is correlation stdeviations;
-  	Nobservations = 263;
+  	FILE IS job_satis_data.txt;
+  	TYPE IS correlation stdeviations;
+  	NOBSERVATIONS = 263;
 
-  Variable:
+  VARIABLE:
   	
-  	Names are work1 work2 work3 happy mood1 mood2
+  	NAMES ARE work1 work2 work3 happy mood1 mood2
     			  perform1 perform2 approval beliefs
   			  selftalk imagery;
 
-  Model:
+  MODEL:
 
   	CT BY work1-imagery;
   	
@@ -162,8 +162,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  22:16:07
-        Ending Time:  22:16:07
+     Beginning Time:  13:20:33
+        Ending Time:  13:20:33
        Elapsed Time:  00:00:00
 
 

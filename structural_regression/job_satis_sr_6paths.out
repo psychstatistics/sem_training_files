@@ -1,28 +1,28 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/30/2013  11:53 AM
+11/13/2013   1:26 PM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	Structural Regression
   	6 paths among the latent variables
   	just identified
 
-  Data:
+  DATA:
 
-  	File is job_satis_data.txt;
-  	Type is correlation stdeviations;
-  	Nobservations = 263;
+  	FILE IS job_satis_data.txt;
+  	TYPE IS correlation stdeviations;
+  	NOBSERVATIONS = 263;
 
-  Variable:
+  VARIABLE:
   	
-  	Names are work1 work2 work3 happy mood1 mood2
+  	NAMES ARE work1 work2 work3 happy mood1 mood2
     			  perform1 perform2 approval beliefs
   			  selftalk imagery;
 
-  Model:
+  MODEL:
 
   	
   	! Measurement Part;
@@ -201,9 +201,9 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:53:31
-        Ending Time:  11:53:32
-       Elapsed Time:  00:00:01
+     Beginning Time:  13:26:02
+        Ending Time:  13:26:02
+       Elapsed Time:  00:00:00
 
 
 

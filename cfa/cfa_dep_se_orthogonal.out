@@ -1,25 +1,25 @@
 Mplus VERSION 7.11 (Mac)
 MUTHEN & MUTHEN
-10/11/2013   4:53 PM
+11/13/2013  11:23 AM
 
 INPUT INSTRUCTIONS
 
-  Title:
+  TITLE:
   	
   	CFA Two Factors;
   	Self-esteem and depression;
   	Orthogonal Factors;
 
-  Data:
+  DATA:
 
-  	File is se_dep_items.csv;
+  	FILE IS se_dep_items.csv;
 
-  Variable:
+  VARIABLE:
   	
   	Names are sad blues depress lonely crying tired failure
   			  worthy capable goodqual attitude;
   			
-  Model:
+  MODEL:
 
   	DEPRESSION BY sad-failure;
   	SE BY worthy-attitude;
@@ -180,8 +180,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  16:53:02
-        Ending Time:  16:53:02
+     Beginning Time:  11:23:22
+        Ending Time:  11:23:22
        Elapsed Time:  00:00:00
 
 

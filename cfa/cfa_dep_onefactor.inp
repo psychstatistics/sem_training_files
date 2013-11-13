@@ -1,19 +1,19 @@
-Title:
+TITLE:
 	
 	CFA One Factor - Depression itmes
 
-Data:
+DATA:
 
-	File is dep_items.csv;
+	FILE IS dep_items.csv;
 
-Variable:
+VARIABLE:
 	
-	Names are sad blues depress lonely crying tired failure;
+	NAMES ARE sad blues depress lonely crying tired failure;
 
-Model:
+MODEL:
 
 	DEPRESSION BY sad-failure;
 	
-Output:
+OUTPUT:
 	
 	STANDARDIZED (STDYX);
